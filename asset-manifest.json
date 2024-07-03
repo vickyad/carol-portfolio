@@ -1,16 +1,30 @@
 {
   "files": {
-    "main.css": "/carol-portfolio/static/css/main.f855e6bc.css",
-    "main.js": "/carol-portfolio/static/js/main.99094d39.js",
+    "main.css": "/carol-portfolio/static/css/main.89d14301.css",
+    "main.js": "/carol-portfolio/static/js/main.e68fb570.js",
     "static/js/453.aa332759.chunk.js": "/carol-portfolio/static/js/453.aa332759.chunk.js",
-    "static/media/logo.svg": "/carol-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/hero_day.png": "/carol-portfolio/static/media/hero_day.0c689dd3a47f28e0fe02.png",
+    "static/media/cannes.png": "/carol-portfolio/static/media/cannes.0af02e81f1af61925f4c.png",
+    "static/media/about-me.png": "/carol-portfolio/static/media/about-me.c82336d25300e2974360.png",
+    "static/media/poland-springs.png": "/carol-portfolio/static/media/poland-springs.1978ce9c6e85460a244c.png",
+    "static/media/sousa-advocacia.png": "/carol-portfolio/static/media/sousa-advocacia.9abab3202b7bf7eb8792.png",
+    "static/media/bestofficeaward.png": "/carol-portfolio/static/media/bestofficeaward.9c10c8e1b0a6f4f08435.png",
+    "static/media/deer-park.png": "/carol-portfolio/static/media/deer-park.fcbed7b5298561c2482b.png",
+    "static/media/amsipro-regular.otf": "/carol-portfolio/static/media/amsipro-regular.207f2e22db05ab8b9d83.otf",
+    "static/media/COOPBL.TTF": "/carol-portfolio/static/media/COOPBL.dbe0cbaa54b6ad6fa396.TTF",
+    "static/media/footer_bg.png": "/carol-portfolio/static/media/footer_bg.2d042f3c110f093d117b.png",
+    "static/media/scroll.png": "/carol-portfolio/static/media/scroll.82444b9d9dafeb34583f.png",
+    "static/media/edu.png": "/carol-portfolio/static/media/edu.93c7cf1dac21eda02a21.png",
+    "static/media/seal.png": "/carol-portfolio/static/media/seal.1f0f4161239f3af5fad2.png",
+    "static/media/isabella.png": "/carol-portfolio/static/media/isabella.47df465b22836b2af7b4.png",
+    "static/media/logo_large.png": "/carol-portfolio/static/media/logo_large.a279c58a53fd64d9da05.png",
     "index.html": "/carol-portfolio/index.html",
-    "main.f855e6bc.css.map": "/carol-portfolio/static/css/main.f855e6bc.css.map",
-    "main.99094d39.js.map": "/carol-portfolio/static/js/main.99094d39.js.map",
+    "main.89d14301.css.map": "/carol-portfolio/static/css/main.89d14301.css.map",
+    "main.e68fb570.js.map": "/carol-portfolio/static/js/main.e68fb570.js.map",
     "453.aa332759.chunk.js.map": "/carol-portfolio/static/js/453.aa332759.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.99094d39.js"
+    "static/css/main.89d14301.css",
+    "static/js/main.e68fb570.js"
   ]
 }
