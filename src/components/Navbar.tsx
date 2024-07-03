@@ -33,7 +33,7 @@ const Navbar = () => {
       <Section>
         <Link href="">Illustrations</Link>
         <Link href="">Contact me</Link>
-        <Socials />
+        <Socials size="sm" />
       </Section>
     </Nav>
   );

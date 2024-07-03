@@ -103,6 +103,10 @@ h2 {
   font-size: 3rem;
 }
 
+p {
+  font-size: 1.125rem;
+}
+
 body {
   background-color: #fff4d6;
   overflow-x: hidden;
