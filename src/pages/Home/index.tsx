@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
-import heroBanner from "../../assets/hero_day.png";
+import heroDayBanner from "../../assets/hero_day.png";
+import heroNightBanner from "../../assets/hero_night.png";
 import scrollImg from "../../assets/scroll.png";
 import AboutMe from "./AboutMe";
 import Cannes from "./Cannes";
@@ -24,6 +25,8 @@ const Content = styled.div`
 `;
 
 const Home = () => {
+  const heroBanner =
+    new Date().getHours() >= 6 ? heroNightBanner : heroDayBanner;
   return (
     <div>
       <Navbar />

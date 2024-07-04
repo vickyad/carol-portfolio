@@ -2,15 +2,11 @@ import styled from "styled-components";
 import footerBg from "../assets/footer_bg.png";
 import logo from "../assets/logo_large.png";
 import Socials from "./Socials";
+import Banner from "./Banner";
 
 const Container = styled.footer`
   position: relative;
   background: linear-gradient(180deg, #fddc86 16.15%, #fff8ba 100%);
-`;
-
-const Banner = styled.div`
-  background-color: #e05b68;
-  height: 6.25rem;
 `;
 
 const InnerContainer = styled.div`
@@ -59,7 +55,9 @@ const FooterBgImg = styled.img`
 const Footer = () => {
   return (
     <Container>
-      <Banner>WIP</Banner>
+      <Banner
+        texts={["UX DESIGN", "UI DESING", "GRAPHIC DESIGN", "ILLUSTRATION"]}
+      />
       <InnerContainer>
         <img src={logo} />
         <Content>

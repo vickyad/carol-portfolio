@@ -2,6 +2,7 @@ import GraphicDesignIcon from "./GraphicDesignIcon";
 import IllustrationIcon from "./IllustrationIcon";
 import InstagramIcon from "./InstagramIcon";
 import LinkedinIcon from "./LinkedinIcon";
+import Star from "./Star";
 import UIDesignIcon from "./UIDesignIcon";
 import UXDesignIcon from "./UXDesignIcon";
 
@@ -13,6 +14,7 @@ interface IconProps {
     | "ux-design"
     | "instagram"
     | "linkedin"
+    | "star"
     | string;
   size?: "sm" | "md";
 }
@@ -32,6 +34,8 @@ const Icon = ({ type, size }: IconProps) => {
         return <LinkedinIcon size={size} />;
       case "instagram":
         return <InstagramIcon size={size} />;
+      case "star":
+        return <Star />;
       default:
         <></>;
     }
