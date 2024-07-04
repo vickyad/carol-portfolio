@@ -1,3 +1,4 @@
+import { SizeType } from "../../types/types";
 import GraphicDesignIcon from "./GraphicDesignIcon";
 import IllustrationIcon from "./IllustrationIcon";
 import InstagramIcon from "./InstagramIcon";
@@ -16,10 +17,11 @@ interface IconProps {
     | "linkedin"
     | "star"
     | string;
-  size?: "sm" | "md";
+  size?: SizeType;
+  color?: string;
 }
 
-const Icon = ({ type, size }: IconProps) => {
+const Icon = ({ type, size, color }: IconProps) => {
   const getIcon = () => {
     switch (type) {
       case "graphic-design":
@@ -31,9 +33,9 @@ const Icon = ({ type, size }: IconProps) => {
       case "ux-design":
         return <UXDesignIcon />;
       case "linkedin":
-        return <LinkedinIcon size={size} />;
+        return <LinkedinIcon size={size} color={color} />;
       case "instagram":
-        return <InstagramIcon size={size} />;
+        return <InstagramIcon size={size} color={color} />;
       case "star":
         return <Star />;
       default:

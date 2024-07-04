@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Socials from "./Socials";
+import { ModeType } from "../types/types";
 
 const Nav = styled.nav`
   position: absolute;
@@ -18,22 +19,38 @@ const Section = styled.div`
   gap: 7.25rem;
 `;
 
-const Link = styled.a`
+const Link = styled.a<{ mode: ModeType }>`
   text-decoration: none;
   text-transform: uppercase;
+  color: ${(props) => (props.mode === "light" ? "#5e262b" : "#ffffff")};
 `;
-const Navbar = () => {
+
+interface NavbarProps {
+  mode?: ModeType;
+}
+
+const Navbar = ({ mode = "dark" }: NavbarProps) => {
   return (
     <Nav>
       <Section>
-        <Link href="">About me</Link>
-        <Link href="">Web design</Link>
-        <Link href="">Graphic Design</Link>
+        <Link mode={mode} href="">
+          About me
+        </Link>
+        <Link mode={mode} href="">
+          Web design
+        </Link>
+        <Link mode={mode} href="">
+          Graphic Design
+        </Link>
       </Section>
       <Section>
-        <Link href="">Illustrations</Link>
-        <Link href="">Contact me</Link>
-        <Socials size="sm" />
+        <Link mode={mode} href="">
+          Illustrations
+        </Link>
+        <Link mode={mode} href="">
+          Contact me
+        </Link>
+        <Socials size="sm" mode={mode} />
       </Section>
     </Nav>
   );

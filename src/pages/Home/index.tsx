@@ -25,11 +25,11 @@ const Content = styled.div`
 `;
 
 const Home = () => {
-  const heroBanner =
-    new Date().getHours() >= 6 ? heroNightBanner : heroDayBanner;
+  const isDarkMode = new Date().getHours() >= 6;
+  const heroBanner = isDarkMode ? heroNightBanner : heroDayBanner;
   return (
     <div>
-      <Navbar />
+      <Navbar mode={isDarkMode ? "dark" : "light"} />
       <HeroImg src={heroBanner} />
       <ScrollImg src={scrollImg} />
       <Content>
