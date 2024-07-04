@@ -80,8 +80,8 @@ const AboutMe = () => {
           </TextContainer>
         </div>
         <AbilitiesContainer>
-          {abilities.map((ability) => (
-            <AbilityContainer>
+          {abilities.map((ability, index) => (
+            <AbilityContainer key={`ability_${index}`}>
               <Icon type={ability.type} />
               <AbilityLabel>{ability.label}</AbilityLabel>
             </AbilityContainer>

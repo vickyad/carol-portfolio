@@ -1,6 +1,6 @@
 import "./App.css";
-import { Link, Route, Routes } from "react-router-dom";
-import Test from "./pages/Test";
+import { Route, Routes } from "react-router-dom";
+import ProjectDetails from "./pages/ProjectDetails";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/projects" element={<ProjectDetails />} />
       </Routes>
       <Footer />
     </div>

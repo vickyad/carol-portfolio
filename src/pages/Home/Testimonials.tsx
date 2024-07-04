@@ -114,8 +114,11 @@ const Testimonials = () => {
         <p>Here's feedback on my performance from clients or colleagues.</p>
       </TextContainer>
       <TestimonialsContainer>
-        {testimonials.map((testimonial) => (
-          <TestimonialContainer color={testimonial.cardColor}>
+        {testimonials.map((testimonial, index) => (
+          <TestimonialContainer
+            color={testimonial.cardColor}
+            key={`testimonial_${index}`}
+          >
             <Quotation>“</Quotation>
             <TestimonialText>{testimonial.text}</TestimonialText>
             <AuthorImgContainer>

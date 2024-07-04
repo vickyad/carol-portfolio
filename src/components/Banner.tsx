@@ -52,34 +52,34 @@ const Banner = ({ texts }: BannerProps) => {
     <Inner>
       <Wrapper>
         <Section>
-          {texts.map((text) => (
+          {texts.map((text, index) => (
             <>
-              <Text>{text}</Text>
-              <Icon type="star" />
+              <Text key={`text_1_${index}`}>{text}</Text>
+              <Icon type="star" key={`icon_1_${index}`} />
             </>
           ))}
         </Section>
         <Section>
-          {texts.map((text) => (
+          {texts.map((text, index) => (
             <>
-              <Text>{text}</Text>
-              <Icon type="star" />
+              <Text key={`text_2_${index}`}>{text}</Text>
+              <Icon type="star" key={`icon_2_${index}`} />
             </>
           ))}
         </Section>
         <Section>
-          {texts.map((text) => (
+          {texts.map((text, index) => (
             <>
-              <Text>{text}</Text>
-              <Icon type="star" />
+              <Text key={`text_3_${index}`}>{text}</Text>
+              <Icon type="star" key={`icon_3_${index}`} />
             </>
           ))}
         </Section>
         <Section>
-          {texts.map((text) => (
+          {texts.map((text, index) => (
             <>
-              <Text>{text}</Text>
-              <Icon type="star" />
+              <Text key={`text_4_${index}`}>{text}</Text>
+              <Icon type="star" key={`icon_4_${index}`} />
             </>
           ))}
         </Section>

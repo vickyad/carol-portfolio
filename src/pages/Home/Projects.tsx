@@ -46,9 +46,21 @@ const ProjectName = styled.p`
 `;
 
 const projects = [
-  { src: polandSpringsBanner, name: "Poland Springs Website", url: "" },
-  { src: sousaAdvocaciaBanner, name: "Sousa Advocacia Website", url: "" },
-  { src: deerParkBanner, name: "Deer Park Website", url: "" },
+  {
+    src: polandSpringsBanner,
+    name: "Poland Springs Website",
+    url: "/projects/poland-springs",
+  },
+  {
+    src: sousaAdvocaciaBanner,
+    name: "Sousa Advocacia Website",
+    url: "/projects/sousa-advocacia",
+  },
+  {
+    src: deerParkBanner,
+    name: "Deer Park Website",
+    url: "/projects/deer-park",
+  },
 ];
 
 const Projects = () => {
@@ -62,8 +74,8 @@ const Projects = () => {
         </p>
       </TextContainer>
       <ProjectsContainer>
-        {projects.map((project) => (
-          <ProjectContainer>
+        {projects.map((project, index) => (
+          <ProjectContainer key={`project_${index}`}>
             <ProjectImg src={project.src} />
             <ProjectName>{project.name}</ProjectName>
             <Button handleClick={() => {}}>
