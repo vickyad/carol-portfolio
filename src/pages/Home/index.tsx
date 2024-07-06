@@ -25,8 +25,9 @@ const Content = styled.div`
 `;
 
 const Home = () => {
-  const isDarkMode = new Date().getHours() >= 6;
+  const isDarkMode = new Date().getHours() <= 5 && new Date().getHours() >= 18;
   const heroBanner = isDarkMode ? heroNightBanner : heroDayBanner;
+
   return (
     <div>
       <Navbar mode={isDarkMode ? "dark" : "light"} />

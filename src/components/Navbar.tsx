@@ -29,7 +29,7 @@ interface NavbarProps {
   mode?: ModeType;
 }
 
-const Navbar = ({ mode = "dark" }: NavbarProps) => {
+const Navbar = ({ mode = "light" }: NavbarProps) => {
   return (
     <Nav>
       <Section>

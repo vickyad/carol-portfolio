@@ -13,7 +13,7 @@ interface SocialsProps {
   mode?: ModeType;
 }
 
-const Socials = ({ size = "md", mode = "dark" }: SocialsProps) => {
+const Socials = ({ size = "md", mode = "light" }: SocialsProps) => {
   return (
     <Container size={size}>
       <li>

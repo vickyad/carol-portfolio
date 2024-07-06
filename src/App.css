@@ -101,10 +101,12 @@ h2 {
     5px 5px 0px #5e262b;
   color: #fddc86;
   font-size: 3rem;
+  line-height: 4rem;
 }
 
 p {
   font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 body {
