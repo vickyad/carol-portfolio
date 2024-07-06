@@ -1,9 +1,10 @@
-import styled from "styled-components";
-import TypographyBox from "../../components/TypographyBox";
-import { ColorPaletteType } from "../../types/types";
-import ColorPalette from "../../components/ColorPalette";
+import styled from 'styled-components';
+import TypographyBox from '../../components/TypographyBox';
+import { ColorPaletteType } from '../../types/types';
+import ColorPalette from '../../components/ColorPalette';
+import UIComponents from '../../components/UIComponents';
 
-const Container = styled.div`
+const Container = styled.section`
   margin: 12.5rem 0;
 `;
 
@@ -17,9 +18,9 @@ const TitleContainer = styled.div`
   margin: 0 auto 6.25rem;
 `;
 
-const Section = styled.section`
+const Section = styled.div`
   display: grid;
-  grid-template-columns: 31% auto;
+  grid-template-columns: 35% auto;
   gap: 2.5rem;
   margin-bottom: 8.75rem;
 `;
@@ -36,16 +37,29 @@ const TypographyContainer = styled.div`
   flex-direction: column;
   gap: 2.188rem;
 `;
+
+const ColorPaletteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+`;
+
+const Paragraph = styled.p<{ fontWeight: string }>`
+  font-weight: ${(props) => props.fontWeight};
+`;
+
 interface StyleGuideProps {
+  pageId: string;
   description: string;
-  fontsUsed: string[];
+  fontsUsed: { name: string; purpose: string; weight: string[] }[];
   typographyDescription: string[];
   colorPalette: ColorPaletteType[];
-  colorPaletteDescription: string[];
+  colorPaletteDescription: { weight: string; text: string }[];
   uiComponentsDescription: string;
 }
 
 const StyleGuide = ({
+  pageId,
   description,
   fontsUsed,
   typographyDescription,
@@ -70,18 +84,24 @@ const StyleGuide = ({
         </div>
         <TypographyContainer>
           {fontsUsed.map((font) => (
-            <TypographyBox font={font} purpose={"Heading"} />
+            <TypographyBox
+              font={font.name}
+              purpose={font.purpose}
+              weights={font.weight}
+            />
           ))}
         </TypographyContainer>
       </Section>
       <Section>
         <div>
           <Title>Color Palette</Title>
-          <div>
+          <ColorPaletteContainer>
             {colorPaletteDescription.map((paragraph) => (
-              <p>{paragraph}</p>
+              <Paragraph fontWeight={paragraph.weight}>
+                {paragraph.text}
+              </Paragraph>
             ))}
-          </div>
+          </ColorPaletteContainer>
         </div>
         <ColorPalette colorPalette={colorPalette} />
       </Section>
@@ -90,6 +110,7 @@ const StyleGuide = ({
           <Title>UI Components</Title>
           <p>{uiComponentsDescription}</p>
         </div>
+        <UIComponents type={pageId} />
       </Section>
     </Container>
   );

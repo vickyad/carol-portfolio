@@ -1,4 +1,8 @@
-export type ColorPaletteType = { name: string; color: string };
+export type ColorPaletteType = {
+  name: string;
+  color: string;
+  letterColor: ModeType;
+};
 
-export type SizeType = "sm" | "md";
-export type ModeType = "light" | "dark";
+export type SizeType = 'sm' | 'md';
+export type ModeType = 'light' | 'dark';

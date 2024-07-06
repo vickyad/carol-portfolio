@@ -1,15 +1,22 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { projects } from "../../content/projects";
-import Navbar from "../../components/Navbar";
-import Breadcrumbs from "../../components/Breadcrumbs";
-import styled from "styled-components";
-import Presentation from "./Presentation";
-import Briefing from "./Briefing";
-import StyleGuide from "./StyleGuide";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { projects } from '../../content/projects';
+import Navbar from '../../components/Navbar';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import styled from 'styled-components';
+import Presentation from './Presentation';
+import Briefing from './Briefing';
+import StyleGuide from './StyleGuide';
+import DesignApproach from './DesignApproach';
+import SiteMap from './SiteMap';
+import Prototypes from './Prototypes';
 
 const Content = styled.div`
   padding: 2.5rem 10% 12.5rem;
+`;
+
+const Image = styled.img`
+  width: -webkit-fill-available;
 `;
 
 const ProjectDetails = () => {
@@ -42,8 +49,9 @@ const ProjectDetails = () => {
               brandBeliefs={pageContent.brandBeliefs}
               brandPersonality={pageContent.brandPersonality}
             />
-            <img src={pageContent.tabletImg} />
+            <Image src={pageContent.tabletImg} />
             <StyleGuide
+              pageId={pageContent.id}
               description={pageContent.styleGuideDescription}
               fontsUsed={pageContent.typography}
               typographyDescription={pageContent.typographyDescription}
@@ -51,6 +59,12 @@ const ProjectDetails = () => {
               colorPaletteDescription={pageContent.colorPaletteDescription}
               uiComponentsDescription={pageContent.uiComponentsDescription}
             />
+            <DesignApproach designApproach={pageContent.designApproach} />
+            <SiteMap
+              description={pageContent.siteMapDescription}
+              siteMapImg={pageContent.siteMapImg}
+            />
+            <Prototypes />
           </Content>
         </div>
       )}

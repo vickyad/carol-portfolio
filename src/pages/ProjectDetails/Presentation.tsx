@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.section`
   display: grid;
   grid-template-columns: 26% auto;
   gap: 1.125rem 3rem;

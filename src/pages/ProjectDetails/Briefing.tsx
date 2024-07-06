@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import Box from "../../components/Box";
+import styled from 'styled-components';
+import Box from '../../components/Box';
 
-const Container = styled.div`
+const Container = styled.section`
   margin: 12.5rem 0;
 `;
 
@@ -14,8 +14,8 @@ const Title = styled.h4`
 `;
 
 const BoxContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 `;
 
@@ -34,12 +34,22 @@ const Briefing = ({
 }: BriefingProps) => {
   return (
     <Container>
-      <Box title={"Briefing"} text={briefing} />
+      <Box title={'Briefing'} text={briefing} color="#fddc86" />
       <Title>Brand Analysis</Title>
       <BoxContainer>
-        <Box title={"Audience"} text={audience} size="sm" />
-        <Box title={"Brand Beliefs"} text={brandBeliefs} size="sm" />
-        <Box title={"Brand Personality"} text={brandPersonality} size="sm" />
+        <Box title={'Audience'} text={audience} size="sm" color="#fddc86" />
+        <Box
+          title={'Brand Beliefs'}
+          text={brandBeliefs}
+          size="sm"
+          color="#fddc86"
+        />
+        <Box
+          title={'Brand Personality'}
+          text={brandPersonality}
+          size="sm"
+          color="#fddc86"
+        />
       </BoxContainer>
     </Container>
   );

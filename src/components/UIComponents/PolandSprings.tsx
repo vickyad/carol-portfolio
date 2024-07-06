@@ -1,8 +1,8 @@
 const PolandSprings = () => {
   return (
     <svg
-      width="1000"
-      height="764"
+      width="-webkit-fill-available"
+      height="fit-content"
       viewBox="0 0 1000 764"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

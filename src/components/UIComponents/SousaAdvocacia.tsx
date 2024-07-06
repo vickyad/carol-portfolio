@@ -1,8 +1,8 @@
 const SousaAdvocacia = () => {
   return (
     <svg
-      width="965"
-      height="570"
+      width="-webkit-fill-available"
+      height="fit-content"
       viewBox="0 0 965 570"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

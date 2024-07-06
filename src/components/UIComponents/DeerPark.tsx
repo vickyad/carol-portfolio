@@ -1,8 +1,8 @@
 const DeerPark = () => {
   return (
     <svg
-      width="1006"
-      height="751"
+      width="-webkit-fill-available"
+      height="fit-content"
       viewBox="0 0 1006 751"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
