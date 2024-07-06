@@ -9,6 +9,7 @@ import sousaAdvocaciaMap from '../assets/sousa_advocacia_map.png';
 import polandSpringBanner from '../assets/poland_spring_banner.png';
 import polandSpringTablet from '../assets/tablet_poland_spring.png';
 import polandSpringMap from '../assets/poland_spring_map.png';
+import { prototype } from 'events';
 
 export const projects = [
   {
@@ -87,6 +88,44 @@ export const projects = [
     siteMapImg: deerParkMap,
     siteMapDescription:
       "The website's user flow had already been previously defined, but through card sorting activities, we were able to refine the flow to enhance user experience.",
+    prototypes: [
+      {
+        title: 'Home Page',
+        description:
+          "On the homepage, we highlight the qualities of the water and the characteristics of the springs to emphasize the excellence of their products. We also include various images of people doing good deeds to showcase the company's ongoing contribution to sustainability and inspire users to make a difference as well.",
+        video: '',
+      },
+      {
+        title: 'Our Springs Page',
+        description:
+          'On this page, we encourage users to explore and learn more about all the springs from which Deer Park Water is sourced. By providing this information, we aim to foster a greater sense of recognition and connection between the buyer and the product, enhancing their understanding and appreciation of its origins.',
+        video: '',
+      },
+      {
+        title: 'Product Landing Page',
+        description:
+          "In this section, we present the company's entire range of products in a clean layout to facilitate navigation. We also include relevant information about each product, encouraging users to explore further.",
+        video: '',
+      },
+      {
+        title: 'Product Detail Page',
+        description:
+          'On this page, we provide more detailed information about the selected product and its production, and also indicate where it can be purchased.',
+        video: '',
+      },
+      {
+        title: 'Contact Us Page',
+        description:
+          'We have incorporated all the relevant information so that users can contact the company while maintaining a visual identity consistent with the rest of the site.',
+        video: '',
+      },
+      {
+        title: 'FAQ Page',
+        description:
+          "On this page, we follow the same approach as the 'Contact Us' section, highlighting the most relevant information in a minimalist and simplified manner to ensure easy navigation.",
+        video: '',
+      },
+    ],
   },
   {
     id: 'sousa-advocacia',
@@ -171,6 +210,50 @@ export const projects = [
     siteMapImg: sousaAdvocaciaMap,
     siteMapDescription:
       "The website's user flow had already been previously defined, but through card sorting activities, we were able to refine the flow to enhance user experience.",
+    prototypes: [
+      {
+        title: 'Home Page',
+        description:
+          "On the main page of the website, we use photos of real people to create a connection between the customer and the product offered. Additionally, we present solid and well-explained reasons for users to trust the company's quality, utilizing icons and images to facilitate understanding.",
+        video: '',
+      },
+      {
+        title: 'About Us Page',
+        description:
+          "On this page, we want to emphasize the reasons why users can trust the Souza team and the exceptional work they do. Therefore, we provide comprehensive information about the company's extensive years of operation and detailed profiles of the associated lawyers who contribute to their success.",
+        video: '',
+      },
+      {
+        title: 'Product Landing Page',
+        description:
+          'On this page, we provide relevant information accompanied by images to facilitate user searches. Our approach is designed to be intuitive, allowing users to quickly find what they need. The information is organized clearly and accessibly, with visual support that enhances understanding and navigation.',
+        video: '',
+      },
+      {
+        title: 'Social Projects Page',
+        description:
+          'On this page, our goal is not only to explain the social projects in which the company is involved and where it operates, but also to provide concrete data that prove the authenticity of the donations and the positive impact they have had on communities.',
+        video: '',
+      },
+      {
+        title: 'Blog',
+        description:
+          "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
+        video: '',
+      },
+      {
+        title: 'Contact Us Page',
+        description:
+          "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
+        video: '',
+      },
+      {
+        title: 'FAQ Page',
+        description:
+          "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
+        video: '',
+      },
+    ],
   },
   {
     id: 'poland-spring',
@@ -258,5 +341,37 @@ export const projects = [
     siteMapImg: polandSpringMap,
     siteMapDescription:
       "The website's user flow had already been previously defined, but through card sorting activities, we were able to refine the flow to enhance user experience.",
+    prototypes: [
+      {
+        title: 'Home Page',
+        description:
+          "On the homepage, we highlight the main values that the company wants to convey to its customers, demonstrating their commitment to the community and showcasing the company's sustainability and the social projects in which they participate. Additionally, we provide relevant information about their water qualities and the production process, ensuring transparency and trust.",
+        video: '',
+      },
+      {
+        title: 'Product Landing Page',
+        description:
+          "On this page, we present relevant information about all the products offered by the company. Alongside the product photos, we have included images of the region to highlight the company's spirit.",
+        video: '',
+      },
+      {
+        title: 'Product Detail Page',
+        description:
+          "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
+        video: '',
+      },
+      {
+        title: 'Contact Us Page',
+        description:
+          'On this page, we provide comprehensive and easily accessible information for users to contact the company, ensuring clarity and conciseness.',
+        video: '',
+      },
+      {
+        title: 'FAQ Page',
+        description:
+          "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
+        video: '',
+      },
+    ],
   },
 ];

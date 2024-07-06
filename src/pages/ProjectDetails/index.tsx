@@ -10,6 +10,7 @@ import StyleGuide from './StyleGuide';
 import DesignApproach from './DesignApproach';
 import SiteMap from './SiteMap';
 import Prototypes from './Prototypes';
+import RelatedProjects from './RelatedProjects';
 
 const Content = styled.div`
   padding: 2.5rem 10% 12.5rem;
@@ -64,7 +65,8 @@ const ProjectDetails = () => {
               description={pageContent.siteMapDescription}
               siteMapImg={pageContent.siteMapImg}
             />
-            <Prototypes />
+            <Prototypes prototypes={pageContent.prototypes} />
+            <RelatedProjects projectId={pageContent.id} />
           </Content>
         </div>
       )}
