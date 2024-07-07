@@ -23,6 +23,7 @@ const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  margin-top: 3.75rem;
 `;
 
 const ProjectImg = styled.img`
@@ -63,7 +64,6 @@ const RelatedProjects = ({ projectId }: RelatedProjectsProps) => {
   return (
     <Container>
       <h2>Related Projects</h2>
-
       <ProjectsContainer>
         {projects.map((project, index) => (
           <>

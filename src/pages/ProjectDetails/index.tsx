@@ -12,8 +12,21 @@ import SiteMap from './SiteMap';
 import Prototypes from './Prototypes';
 import RelatedProjects from './RelatedProjects';
 
+const Banner = styled.img`
+  width: 100vw;
+  max-height: 46.875rem;
+  object-fit: cover;
+`;
 const Content = styled.div`
-  padding: 2.5rem 10% 12.5rem;
+  padding: 2.5rem 5rem 12.5rem;
+
+  @media (min-width: 1550px) {
+    padding: 2.5rem 6.25rem 12.5rem;
+  }
+
+  @media (min-width: 1900px) {
+    padding: 2.5rem 12.5rem 12.5rem;
+  }
 `;
 
 const Image = styled.img`
@@ -35,8 +48,8 @@ const ProjectDetails = () => {
     <>
       {pageContent && (
         <div>
-          <Navbar />
-          <img src={pageContent.banner} />
+          <Navbar type="secondary" />
+          <Banner src={pageContent.banner} />
           <Content>
             <Breadcrumbs path={pageContent.breadcrumb} />
             <Presentation

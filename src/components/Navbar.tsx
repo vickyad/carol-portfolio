@@ -1,37 +1,43 @@
-import styled from "styled-components";
-import Socials from "./Socials";
-import { ModeType } from "../types/types";
+import styled from 'styled-components';
+import Socials from './Socials';
+import { ModeType, VariantType } from '../types/types';
+import logo from '../assets/logo_small.png';
 
-const Nav = styled.nav`
-  position: absolute;
+const Nav = styled.nav<{ type: string }>`
+  position: ${(props) => (props.type === 'primary' ? 'absolute' : 'relative')};
   top: 0;
   width: -webkit-fill-available;
-  background-color: transparent;
+  background-color: ${(props) =>
+    props.type === 'primary' ? 'transparent' : '#ffffff'};
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 3.188rem 10%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: ${(props) =>
+    props.type === 'primary' ? '3.188rem 10%' : '1.094rem 10%'};
 `;
 
 const Section = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 7.25rem;
+  justify-content: space-evenly;
+  width: -webkit-fill-available;
 `;
 
 const Link = styled.a<{ mode: ModeType }>`
   text-decoration: none;
   text-transform: uppercase;
-  color: ${(props) => (props.mode === "light" ? "#5e262b" : "#ffffff")};
+  color: ${(props) => (props.mode === 'light' ? '#5e262b' : '#ffffff')};
 `;
 
 interface NavbarProps {
+  type?: VariantType;
   mode?: ModeType;
 }
 
-const Navbar = ({ mode = "light" }: NavbarProps) => {
+const Navbar = ({ mode = 'light', type = 'primary' }: NavbarProps) => {
   return (
-    <Nav>
+    <Nav type={type}>
       <Section>
         <Link mode={mode} href="">
           About me
@@ -43,6 +49,7 @@ const Navbar = ({ mode = "light" }: NavbarProps) => {
           Graphic Design
         </Link>
       </Section>
+      {type === 'secondary' && <img src={logo} />}
       <Section>
         <Link mode={mode} href="">
           Illustrations

@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { VariantType } from '../types/types';
 
-const Container = styled.button<{ variant: "primary" | "secondary" }>`
+const Container = styled.button<{ variant: VariantType }>`
   width: fit-content;
   background-color: ${(props) =>
-    props.variant === "primary" ? "#E05B68" : "#a686fc"};
+    props.variant === 'primary' ? '#E05B68' : '#a686fc'};
   color: #ffffff;
   padding: 0.625rem 2.5rem;
   border-radius: 3rem;
@@ -14,30 +15,30 @@ const Container = styled.button<{ variant: "primary" | "secondary" }>`
   &:hover,
   &:active {
     background-color: ${(props) =>
-      props.variant === "primary" ? "#5E262B" : "#846bc9"};
+      props.variant === 'primary' ? '#5E262B' : '#846bc9'};
     box-shadow: 0px 4px 4px 0px #00000059;
   }
 
   &:focus {
     border: solid 2px
-      ${(props) => (props.variant === "primary" ? "#5E262B" : "#846bc9")};
+      ${(props) => (props.variant === 'primary' ? '#5E262B' : '#846bc9')};
   }
 
   &:disabled {
     background-color: ${(props) =>
-      props.variant === "primary" ? "#EDC2C6" : "#e4d6f5"};
+      props.variant === 'primary' ? '#EDC2C6' : '#e4d6f5'};
   }
 `;
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: VariantType;
   handleClick: () => void;
 }
 
 const Button = ({
   children,
-  variant = "primary",
+  variant = 'primary',
   handleClick,
 }: ButtonProps) => {
   return (

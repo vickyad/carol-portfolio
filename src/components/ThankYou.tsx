@@ -7,8 +7,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2.188rem;
-  width: 50%;
-  margin: 0 auto;
+  margin: 6.25rem auto 0;
 `;
 
 const Paragraph = styled.p`
@@ -20,6 +19,7 @@ const Paragraph = styled.p`
   font-size: 3rem;
   line-height: 4rem;
   text-align: center;
+  width: 28%;
 `;
 
 const ThankYou = () => {

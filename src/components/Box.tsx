@@ -9,7 +9,7 @@ const Container = styled.div`
 const Title = styled.h4<{ size: SizeType; color: string }>`
   font-family: Cooper, Arial, serif;
   color: #5e262b;
-  font-size: ${(props) => (props.size === 'md' ? '1.5rem' : '1.125rem')};
+  font-size: ${(props) => (props.size === 'sm' ? '1.125rem' : '1.5rem')};
   background-color: ${(props) => props.color};
   border-radius: 1.25rem 1.25rem 0 0;
   padding: 0.938rem 5.563rem;
@@ -21,7 +21,7 @@ const TextContainer = styled.div`
 `;
 
 const Paragraph = styled.p<{ size: SizeType }>`
-  font-size: ${(props) => (props.size === 'md' ? '1.25rem' : '1.125rem')};
+  font-size: ${(props) => (props.size === 'sm' ? '1.125rem' : '1.25rem')};
   line-height: 1.875rem;
 `;
 
@@ -36,7 +36,7 @@ interface BoxProps {
   size?: SizeType;
 }
 
-const Box = ({ title, text, color, size = 'md' }: BoxProps) => {
+const Box = ({ title, text, color, size = 'base' }: BoxProps) => {
   const isOptionObject = (
     obj: any
   ): obj is { label: string; value: string } => {

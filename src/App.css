@@ -1,13 +1,13 @@
 /* Defining fonts */
 @font-face {
-  font-family: "Amsipro";
-  src: local("Amsipro"),
-    url(../public/typography/amsipro-regular.otf) format("opentype");
+  font-family: 'Amsipro';
+  src: local('Amsipro'),
+    url(../public/typography/amsipro-regular.otf) format('opentype');
 }
 
 @font-face {
-  font-family: "Cooper";
-  src: local("Cooper"), url(../public/typography/COOPBL.TTF) format("truetype");
+  font-family: 'Cooper';
+  src: local('Cooper'), url(../public/typography/COOPBL.TTF) format('truetype');
 }
 
 html,
@@ -112,4 +112,20 @@ p {
 body {
   background-color: #fff4d6;
   overflow-x: hidden;
+}
+
+html {
+  font-size: 86%;
+}
+
+@media (min-width: 1550px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 2400px) {
+  html {
+    font-size: 115%;
+  }
 }
