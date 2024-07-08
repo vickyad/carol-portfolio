@@ -1,13 +1,82 @@
 /* Defining fonts */
 @font-face {
   font-family: "Amsipro";
+  font-weight: normal;
   src: local("Amsipro"),
     url(../public/typography/amsipro-regular.otf) format("opentype");
 }
 
 @font-face {
+  font-family: "Amsipro";
+  font-weight: bold;
+  src: local("Amsipro"),
+    url(../public/typography/amsipro-bold.otf) format("opentype");
+}
+
+@font-face {
   font-family: "Cooper";
   src: local("Cooper"), url(../public/typography/COOPBL.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: local("Barlow"),
+    url(../public/typography/Barlow-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Trade Gothic Lt";
+  src: local("Trade Gothic Lt"),
+    url(../public/typography/trade-gothic-lt-bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  src: local("SF Pro Display"),
+    url(../public/typography/SFPRODISPLAYREGULAR.OTF) format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  src: local("SF Pro Display"),
+    url(../public/typography/SFPRODISPLAYBOLD.OTF) format("opentype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: local("Noto Sans"),
+    url(../public/typography/NotoSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Trade Gothic LH";
+  src: local("Trade Gothic LH"),
+    url(../public/typography/Trade_Gothic_LH_Extended_Bold.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Trade Gothic Lt Std";
+  font-weight: normal;
+  src: local("Trade Gothic Lt Std"),
+    url(../public/typography/trade-gothic-lt-std-58a78e64434a9.otf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Trade Gothic Lt Std";
+  font-weight: bold;
+  src: local("Trade Gothic Lt Std"),
+    url(../public/typography/trade-gothic-lt-std-bold-condensed-no-20-5872def1d27d8.otf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Monarcha";
+  src: local("Monarcha"),
+    url(../public/typography/Monarcha.otf) format("opentype");
 }
 
 /* General Styles */

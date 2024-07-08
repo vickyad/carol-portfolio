@@ -41,7 +41,7 @@ const ColorPaletteContainer = styled.div`
 interface StyleGuideProps {
   pageId: string;
   description: string;
-  fontsUsed: { name: string; purpose: string; weight: string[] }[];
+  fontsUsed: { name: string; purpose: string; weight: WeightType[] }[];
   typographyDescription: string[];
   colorPalette: ColorPaletteType[];
   colorPaletteDescription: { weight: WeightType; text: string }[];
