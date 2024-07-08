@@ -8,7 +8,7 @@ const LogoIcon = ({ size }: LogoIconProps) => {
   return (
     <svg
       width={size === "sm" ? "119" : "289"}
-      height="fit-content"
+      height={size === "sm" ? "55" : "134"}
       viewBox="0 0 289 134"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -10,9 +10,9 @@ const Nav = styled.nav<{ type: string }>`
   width: -webkit-fill-available;
   background-color: ${(props) =>
     props.type === "primary" ? "transparent" : "#ffffff"};
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: auto 119px auto;
+  gap: 0 7.25rem;
   align-items: center;
   padding: ${(props) =>
     props.type === "primary" ? "3.188rem 10%" : "1.094rem 10%"};
@@ -21,7 +21,7 @@ const Nav = styled.nav<{ type: string }>`
 const LinksList = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: -webkit-fill-available;
 `;
 
