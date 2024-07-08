@@ -1,10 +1,16 @@
 {
   "files": {
-    "main.css": "/carol-portfolio/static/css/main.89d14301.css",
-    "main.js": "/carol-portfolio/static/js/main.0ab544f5.js",
+    "main.css": "/carol-portfolio/static/css/main.f07f37e1.css",
+    "main.js": "/carol-portfolio/static/js/main.c4b57dbf.js",
     "static/js/453.aa332759.chunk.js": "/carol-portfolio/static/js/453.aa332759.chunk.js",
     "static/media/hero_night.png": "/carol-portfolio/static/media/hero_night.cb19a70cc37f52c50df2.png",
     "static/media/hero_day.png": "/carol-portfolio/static/media/hero_day.0c689dd3a47f28e0fe02.png",
+    "static/media/poland_spring_banner.png": "/carol-portfolio/static/media/poland_spring_banner.a4c6537dc52de40d42fc.png",
+    "static/media/sousa_advocacia_banner.png": "/carol-portfolio/static/media/sousa_advocacia_banner.327ca5e5fa464e69f85c.png",
+    "static/media/deer_park_banner.png": "/carol-portfolio/static/media/deer_park_banner.cca7f84ebd2f40182dcd.png",
+    "static/media/tablet_deer_park.png": "/carol-portfolio/static/media/tablet_deer_park.e35e2855f72863c37715.png",
+    "static/media/tablet_poland_spring.png": "/carol-portfolio/static/media/tablet_poland_spring.c11491a4a3f06ef58771.png",
+    "static/media/tablet_sousa_advocacia.png": "/carol-portfolio/static/media/tablet_sousa_advocacia.20030dc2d005bbe46c1b.png",
     "static/media/cannes.png": "/carol-portfolio/static/media/cannes.0af02e81f1af61925f4c.png",
     "static/media/about-me.png": "/carol-portfolio/static/media/about-me.c82336d25300e2974360.png",
     "static/media/poland-springs.png": "/carol-portfolio/static/media/poland-springs.1978ce9c6e85460a244c.png",
@@ -12,20 +18,25 @@
     "static/media/bestofficeaward.png": "/carol-portfolio/static/media/bestofficeaward.9c10c8e1b0a6f4f08435.png",
     "static/media/deer-park.png": "/carol-portfolio/static/media/deer-park.fcbed7b5298561c2482b.png",
     "static/media/amsipro-regular.otf": "/carol-portfolio/static/media/amsipro-regular.207f2e22db05ab8b9d83.otf",
+    "static/media/sousa_advocacia_map.png": "/carol-portfolio/static/media/sousa_advocacia_map.93090f053fcbba09ca93.png",
     "static/media/COOPBL.TTF": "/carol-portfolio/static/media/COOPBL.dbe0cbaa54b6ad6fa396.TTF",
+    "static/media/deer_park_map.png": "/carol-portfolio/static/media/deer_park_map.ca7fcf4a56dcc9a62c0e.png",
     "static/media/footer_bg.png": "/carol-portfolio/static/media/footer_bg.2d042f3c110f093d117b.png",
     "static/media/scroll.png": "/carol-portfolio/static/media/scroll.82444b9d9dafeb34583f.png",
+    "static/media/poland_spring_map.png": "/carol-portfolio/static/media/poland_spring_map.950dda2451e3e4c86f5f.png",
+    "static/media/Mel.png": "/carol-portfolio/static/media/Mel.9eec9c441c8638d0b836.png",
+    "static/media/Charlize.png": "/carol-portfolio/static/media/Charlize.45f37882fb6cd59c0898.png",
     "static/media/edu.png": "/carol-portfolio/static/media/edu.93c7cf1dac21eda02a21.png",
     "static/media/seal.png": "/carol-portfolio/static/media/seal.1f0f4161239f3af5fad2.png",
     "static/media/isabella.png": "/carol-portfolio/static/media/isabella.47df465b22836b2af7b4.png",
     "static/media/logo_large.png": "/carol-portfolio/static/media/logo_large.a279c58a53fd64d9da05.png",
     "index.html": "/carol-portfolio/index.html",
-    "main.89d14301.css.map": "/carol-portfolio/static/css/main.89d14301.css.map",
-    "main.0ab544f5.js.map": "/carol-portfolio/static/js/main.0ab544f5.js.map",
+    "main.f07f37e1.css.map": "/carol-portfolio/static/css/main.f07f37e1.css.map",
+    "main.c4b57dbf.js.map": "/carol-portfolio/static/js/main.c4b57dbf.js.map",
     "453.aa332759.chunk.js.map": "/carol-portfolio/static/js/453.aa332759.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89d14301.css",
-    "static/js/main.0ab544f5.js"
+    "static/css/main.f07f37e1.css",
+    "static/js/main.c4b57dbf.js"
   ]
 }
