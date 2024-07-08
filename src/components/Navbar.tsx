@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Socials from "./Socials";
 import { ModeType, VariantType } from "../types/types";
-import logo from "../assets/logo_small.png";
 import { Link } from "react-router-dom";
+import Icon from "./Icon";
 
 const Nav = styled.nav<{ type: string }>`
   position: ${(props) => (props.type === "primary" ? "absolute" : "relative")};
@@ -56,7 +56,7 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
           </StyledLink>
         </li>
       </LinksList>
-      {type === "secondary" && <img src={logo} />}
+      {type === "secondary" && <Icon type="logo" size="sm" />}
       <LinksList>
         <li>
           <StyledLink mode={mode} to="">

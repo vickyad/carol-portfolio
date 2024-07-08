@@ -3,6 +3,7 @@ import GraphicDesignIcon from "./GraphicDesignIcon";
 import IllustrationIcon from "./IllustrationIcon";
 import InstagramIcon from "./InstagramIcon";
 import LinkedinIcon from "./LinkedinIcon";
+import LogoIcon from "./LogoIcon";
 import Star from "./Star";
 import UIDesignIcon from "./UIDesignIcon";
 import UXDesignIcon from "./UXDesignIcon";
@@ -38,6 +39,8 @@ const Icon = ({ type, size, color }: IconProps) => {
         return <InstagramIcon size={size} color={color} />;
       case "star":
         return <Star />;
+      case "logo":
+        return <LogoIcon size={size} />;
       default:
         <></>;
     }

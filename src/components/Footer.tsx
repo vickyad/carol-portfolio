@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import footerBg from "../assets/footer_bg.png";
-import logo from "../assets/logo_large.png";
 import Socials from "./Socials";
 import FooterBanner from "./FooterBanner";
 import Typography from "./Typography";
 import { Link } from "react-router-dom";
+import Icon from "./Icon";
 
 const Container = styled.footer`
   position: relative;
@@ -60,7 +60,7 @@ const Footer = () => {
         texts={["UX DESIGN", "UI DESING", "GRAPHIC DESIGN", "ILLUSTRATION"]}
       />
       <InnerContainer>
-        <img src={logo} />
+        <Icon type="logo" />
         <Content>
           <LinksList>
             <li>

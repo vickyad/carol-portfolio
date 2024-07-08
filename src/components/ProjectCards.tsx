@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import polandSpringsBanner from "../assets/poland-springs.png";
-import sousaAdvocaciaBanner from "../assets/sousa-advocacia.png";
-import deerParkBanner from "../assets/deer-park.png";
 import Button from "./Button";
 import Typography from "./Typography";
+import { projects } from "../content/projectCards";
 
 const Container = styled.section`
   margin: 15.438rem 0 9rem;
@@ -39,27 +37,6 @@ const ProjectImg = styled.img`
   height: 30rem;
   object-fit: cover;
 `;
-
-const projects = [
-  {
-    id: "poland-springs",
-    src: polandSpringsBanner,
-    name: "Poland Springs Website",
-    url: "/projects/poland-springs",
-  },
-  {
-    id: "sousa-advocacia",
-    src: sousaAdvocaciaBanner,
-    name: "Sousa Advocacia Website",
-    url: "/projects/sousa-advocacia",
-  },
-  {
-    id: "deer-park",
-    src: deerParkBanner,
-    name: "Deer Park Website",
-    url: "/projects/deer-park",
-  },
-];
 
 interface ProjectCardsProps {
   title: string;
