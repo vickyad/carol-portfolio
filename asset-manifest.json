@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/carol-portfolio/static/css/main.1e96e344.css",
-    "main.js": "/carol-portfolio/static/js/main.cc57a3a8.js",
+    "main.js": "/carol-portfolio/static/js/main.66bcf99e.js",
     "static/js/453.aa332759.chunk.js": "/carol-portfolio/static/js/453.aa332759.chunk.js",
     "static/media/hero_night.png": "/carol-portfolio/static/media/hero_night.cb19a70cc37f52c50df2.png",
     "static/media/hero_day.png": "/carol-portfolio/static/media/hero_day.0c689dd3a47f28e0fe02.png",
@@ -41,11 +41,11 @@
     "static/media/isabella.png": "/carol-portfolio/static/media/isabella.47df465b22836b2af7b4.png",
     "index.html": "/carol-portfolio/index.html",
     "main.1e96e344.css.map": "/carol-portfolio/static/css/main.1e96e344.css.map",
-    "main.cc57a3a8.js.map": "/carol-portfolio/static/js/main.cc57a3a8.js.map",
+    "main.66bcf99e.js.map": "/carol-portfolio/static/js/main.66bcf99e.js.map",
     "453.aa332759.chunk.js.map": "/carol-portfolio/static/js/453.aa332759.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e96e344.css",
-    "static/js/main.cc57a3a8.js"
+    "static/js/main.66bcf99e.js"
   ]
 }
