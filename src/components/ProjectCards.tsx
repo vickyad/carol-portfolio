@@ -74,10 +74,12 @@ const ProjectCards = ({
   return (
     <Container>
       <TextContainer>
-        <Typography variant="primary" size="6xl">
+        <Typography variant="primary" size="6xl" textAlign="center">
           {title}
         </Typography>
-        {description && <Typography>{description}</Typography>}
+        {description && (
+          <Typography textAlign="center">{description}</Typography>
+        )}
       </TextContainer>
       <ProjectsContainer relatedProjects={relatedProjects}>
         {projects.map((project, index) =>
