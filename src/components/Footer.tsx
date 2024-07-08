@@ -53,6 +53,12 @@ const FooterBgImg = styled.img`
   width: 100vw;
 `;
 
+const DevLink = styled(Link)`
+  color: #e05b68;
+  font-weight: bold;
+  text-decoration: none;
+`;
+
 const Footer = () => {
   return (
     <Container>
@@ -82,6 +88,15 @@ const Footer = () => {
           <Socials />
         </Content>
         <Typography size="lg">© 2023 by Carolina Silva da Silva</Typography>
+        <Typography size="base">
+          Coded with love by{" "}
+          <DevLink
+            to="https://www.linkedin.com/in/victoria-duarte-193322176/"
+            target="_blank"
+          >
+            Vic
+          </DevLink>
+        </Typography>
       </InnerContainer>
       <FooterBgImg src={footerBg} />
     </Container>
