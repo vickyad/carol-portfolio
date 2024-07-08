@@ -73,10 +73,10 @@ const Testimonials = () => {
   return (
     <Container>
       <TextContainer>
-        <Typography variant="primary" size="6xl">
+        <Typography variant="primary" size="6xl" textAlign="center">
           Testimonials
         </Typography>
-        <Typography>
+        <Typography textAlign="center">
           Here's feedback on my performance from clients or colleagues.
         </Typography>
       </TextContainer>
