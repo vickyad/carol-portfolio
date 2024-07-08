@@ -73,8 +73,12 @@ const Testimonials = () => {
   return (
     <Container>
       <TextContainer>
-        <h2>Testimonials</h2>
-        <p>Here's feedback on my performance from clients or colleagues.</p>
+        <Typography variant="primary" size="6xl">
+          Testimonials
+        </Typography>
+        <Typography>
+          Here's feedback on my performance from clients or colleagues.
+        </Typography>
       </TextContainer>
       <TestimonialsContainer>
         {testimonials.map((testimonial, index) => (

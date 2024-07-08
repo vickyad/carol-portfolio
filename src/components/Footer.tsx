@@ -43,6 +43,7 @@ const LinksList = styled.ul`
 const StyledLink = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
+  color: #5e262b;
 `;
 
 const FooterBgImg = styled.img`
