@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import ThankYou from '../../components/ThankYou';
+import styled from "styled-components";
+import ThankYou from "../../components/ThankYou";
+import Typography from "../../components/Typography";
 
 const Container = styled.div`
   display: grid;
@@ -18,8 +19,10 @@ const Prototypes = ({ prototypes }: PrototypesProps) => {
       {prototypes.map((prototype) => (
         <div>
           <Container>
-            <h2>{prototype.title}</h2>
-            <p>{prototype.description}</p>
+            <Typography variant="primary" size="6xl">
+              {prototype.title}
+            </Typography>
+            <Typography>{prototype.description}</Typography>
           </Container>
           <span>VIDEO HERE</span>
         </div>

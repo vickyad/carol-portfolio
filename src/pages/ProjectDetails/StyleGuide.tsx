@@ -1,8 +1,9 @@
-import styled from 'styled-components';
-import TypographyBox from '../../components/TypographyBox';
-import { ColorPaletteType } from '../../types/types';
-import ColorPalette from '../../components/ColorPalette';
-import UIComponents from '../../components/UIComponents';
+import styled from "styled-components";
+import TypographyBox from "../../components/TypographyBox";
+import { ColorPaletteType, WeightType } from "../../types/types";
+import ColorPalette from "../../components/ColorPalette";
+import UIComponents from "../../components/UIComponents";
+import Typography from "../../components/Typography";
 
 const Container = styled.section`
   margin: 12.5rem 0;
@@ -25,13 +26,6 @@ const Section = styled.div`
   margin-bottom: 8.75rem;
 `;
 
-const Title = styled.h3`
-  font-family: Cooper, Arial, serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-`;
-
 const TypographyContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -44,17 +38,13 @@ const ColorPaletteContainer = styled.div`
   gap: 1.125rem;
 `;
 
-const Paragraph = styled.p<{ fontWeight: string }>`
-  font-weight: ${(props) => props.fontWeight};
-`;
-
 interface StyleGuideProps {
   pageId: string;
   description: string;
   fontsUsed: { name: string; purpose: string; weight: string[] }[];
   typographyDescription: string[];
   colorPalette: ColorPaletteType[];
-  colorPaletteDescription: { weight: string; text: string }[];
+  colorPaletteDescription: { weight: WeightType; text: string }[];
   uiComponentsDescription: string;
 }
 
@@ -70,15 +60,23 @@ const StyleGuide = ({
   return (
     <Container>
       <TitleContainer>
-        <h2>Style Guide</h2>
-        <p>{description}</p>
+        <Typography variant="primary" size="6xl">
+          Style Guide
+        </Typography>
+        <Typography>{description}</Typography>
       </TitleContainer>
       <Section>
         <div>
-          <Title>Typography</Title>
+          <Typography
+            variant="tertiary"
+            size="3xl"
+            style={{ marginBottom: "1.25rem" }}
+          >
+            Typography
+          </Typography>
           <div>
             {typographyDescription.map((paragraph) => (
-              <p>{paragraph}</p>
+              <Typography>{paragraph}</Typography>
             ))}
           </div>
         </div>
@@ -94,12 +92,18 @@ const StyleGuide = ({
       </Section>
       <Section>
         <div>
-          <Title>Color Palette</Title>
+          <Typography
+            variant="tertiary"
+            size="3xl"
+            style={{ marginBottom: "1.25rem" }}
+          >
+            Color Palette
+          </Typography>
           <ColorPaletteContainer>
             {colorPaletteDescription.map((paragraph) => (
-              <Paragraph fontWeight={paragraph.weight}>
+              <Typography weight={paragraph.weight}>
                 {paragraph.text}
-              </Paragraph>
+              </Typography>
             ))}
           </ColorPaletteContainer>
         </div>
@@ -107,7 +111,13 @@ const StyleGuide = ({
       </Section>
       <Section>
         <div>
-          <Title>UI Components</Title>
+          <Typography
+            variant="tertiary"
+            size="3xl"
+            style={{ marginBottom: "1.25rem" }}
+          >
+            UI Components
+          </Typography>
           <p>{uiComponentsDescription}</p>
         </div>
         <UIComponents type={pageId} />

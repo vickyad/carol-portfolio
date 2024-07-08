@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import melImg from '../assets/Mel.png';
-import charlizeImg from '../assets/Charlize.png';
+import styled from "styled-components";
+import melImg from "../assets/Mel.png";
+import charlizeImg from "../assets/Charlize.png";
+import Typography from "./Typography";
 
 const Container = styled.div`
   display: flex;
@@ -10,15 +11,7 @@ const Container = styled.div`
   margin: 6.25rem auto 0;
 `;
 
-const Paragraph = styled.p`
-  font-family: Cooper, Arial, serif;
-  text-shadow: 2px 0 #5e262b, -2px 0 #5e262b, 0 2px #5e262b, 0 -2px #5e262b,
-    1px 1px #5e262b, -1px -1px #5e262b, 1px -1px #5e262b, -1px 1px #5e262b,
-    5px 5px 0px #5e262b;
-  color: #fddc86;
-  font-size: 3rem;
-  line-height: 4rem;
-  text-align: center;
+const TextContainer = styled.div`
   width: 28%;
 `;
 
@@ -26,7 +19,11 @@ const ThankYou = () => {
   return (
     <Container>
       <img src={melImg} />
-      <Paragraph>Thank You for Watching</Paragraph>
+      <TextContainer>
+        <Typography size="6xl" variant="primary" textAlign="center">
+          Thank You for Watching
+        </Typography>
+      </TextContainer>
       <img src={charlizeImg} />
     </Container>
   );

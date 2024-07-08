@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import sealImg from "../../assets/seal.png";
-import eduImg from "../../assets/edu.png";
-import isaImg from "../../assets/isabella.png";
+import { testimonials } from "../../content/testimonials";
+import Typography from "../../components/Typography";
 
 const Container = styled.section`
   margin: 8.875rem 0;
@@ -49,10 +49,6 @@ const Quotation = styled.span`
   font-size: 18.75rem;
 `;
 
-const TestimonialText = styled.p`
-  grid-column-start: span 3;
-`;
-
 const AuthorImgContainer = styled.div`
   position: relative;
   width: fit-content;
@@ -73,39 +69,6 @@ const AuthorImg = styled.img`
   object-fit: cover;
 `;
 
-const AuthorName = styled.p`
-  font-weight: bold;
-  font-size: 1rem;
-`;
-
-const AuthorPosition = styled.p`
-  font-size: 0.875rem;
-`;
-
-const testimonials = [
-  {
-    text: "A Carol não apenas aproveita cada oportunidade, mas também entrega resultados impressionantes. Mal posso esperar para ter a chance de trabalhar novamente com essa excelente profissional!",
-    authorSrc: isaImg,
-    authorName: "Isabella Salles",
-    authorPosition: "Senior UX / UI",
-    cardColor: "#FDDC86",
-  },
-  {
-    text: "O trabalho da Carol é excepcional, com uma abordagem única e inovadora. Sua criatividade e atenção aos detalhes elevam cada projeto. Altamente recomendada para quem busca qualidade e originalidade. #DesignExcepcional",
-    authorSrc: eduImg,
-    authorName: "Eduardo Koetz",
-    authorPosition: "CEO da ADVBOX",
-    cardColor: "#B7D9D4",
-  },
-  {
-    text: "A Carol não apenas aproveita cada oportunidade, mas também entrega resultados impressionantes. Mal posso esperar para ter a chance de trabalhar novamente com essa excelente profissional!",
-    authorSrc: isaImg,
-    authorName: "Isabella Salles",
-    authorPosition: "Senior UX / UI",
-    cardColor: "#E4D6F5",
-  },
-];
-
 const Testimonials = () => {
   return (
     <Container>
@@ -120,14 +83,18 @@ const Testimonials = () => {
             key={`testimonial_${index}`}
           >
             <Quotation>“</Quotation>
-            <TestimonialText>{testimonial.text}</TestimonialText>
+            <Typography style={{ gridColumnStart: "span 3" }}>
+              {testimonial.text}
+            </Typography>
             <AuthorImgContainer>
               <AuthorImg src={testimonial.authorSrc} />
               <SealImg src={sealImg} />
             </AuthorImgContainer>
             <div>
-              <AuthorName>{testimonial.authorName}</AuthorName>
-              <AuthorPosition>{testimonial.authorPosition}</AuthorPosition>
+              <Typography size="lg" weight="bold">
+                {testimonial.authorName}
+              </Typography>
+              <Typography size="base">{testimonial.authorPosition}</Typography>
             </div>
           </TestimonialContainer>
         ))}

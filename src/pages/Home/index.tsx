@@ -21,7 +21,15 @@ const ScrollImg = styled.img`
 `;
 
 const Content = styled.div`
-  padding: 0 10%;
+  padding: 2.5rem 5rem 12.5rem;
+
+  @media (min-width: 1550px) {
+    padding: 2.5rem 6.25rem 12.5rem;
+  }
+
+  @media (min-width: 1900px) {
+    padding: 2.5rem 12.5rem 12.5rem;
+  }
 `;
 
 const Home = () => {

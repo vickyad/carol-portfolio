@@ -1,8 +1,10 @@
-import styled from 'styled-components';
-import polandSpringsBanner from '../../assets/poland-springs.png';
-import sousaAdvocaciaBanner from '../../assets/sousa-advocacia.png';
-import deerParkBanner from '../../assets/deer-park.png';
-import Button from '../../components/Button';
+import styled from "styled-components";
+import polandSpringsBanner from "../../assets/poland-springs.png";
+import sousaAdvocaciaBanner from "../../assets/sousa-advocacia.png";
+import deerParkBanner from "../../assets/deer-park.png";
+import Button from "../../components/Button";
+import { Link } from "react-router-dom";
+import Typography from "../../components/Typography";
 
 const Container = styled.section`
   margin-top: 12.5rem;
@@ -14,7 +16,7 @@ const ProjectsContainer = styled.div`
   gap: 8%;
 `;
 
-const TransparentLink = styled.a`
+const TransparentLink = styled(Link)`
   text-decoration: none;
   color: #ffffff;
 `;
@@ -30,29 +32,24 @@ const ProjectImg = styled.img`
   width: -webkit-fill-available;
 `;
 
-const ProjectName = styled.p`
-  font-size: 2rem;
-  font-weight: bold;
-`;
-
 const projects = [
   {
-    id: 'poland-springs',
+    id: "poland-springs",
     src: polandSpringsBanner,
-    name: 'Poland Springs Website',
-    url: '/projects/poland-springs',
+    name: "Poland Springs Website",
+    url: "/projects/poland-springs",
   },
   {
-    id: 'sousa-advocacia',
+    id: "sousa-advocacia",
     src: sousaAdvocaciaBanner,
-    name: 'Sousa Advocacia Website',
-    url: '/projects/sousa-advocacia',
+    name: "Sousa Advocacia Website",
+    url: "/projects/sousa-advocacia",
   },
   {
-    id: 'deer-park',
+    id: "deer-park",
     src: deerParkBanner,
-    name: 'Deer Park Website',
-    url: '/projects/deer-park',
+    name: "Deer Park Website",
+    url: "/projects/deer-park",
   },
 ];
 
@@ -63,18 +60,20 @@ interface RelatedProjectsProps {
 const RelatedProjects = ({ projectId }: RelatedProjectsProps) => {
   return (
     <Container>
-      <h2>Related Projects</h2>
+      <Typography variant="primary" size="6xl">
+        Related Projects
+      </Typography>
       <ProjectsContainer>
         {projects.map((project, index) => (
           <>
             {projectId !== project.id && (
               <ProjectContainer key={`project_${index}`}>
                 <ProjectImg src={project.src} />
-                <ProjectName>{project.name}</ProjectName>
+                <Typography size="4xl" weight="bold">
+                  {project.name}
+                </Typography>
                 <Button handleClick={() => {}}>
-                  <TransparentLink href={project.url}>
-                    READ MORE
-                  </TransparentLink>
+                  <TransparentLink to={project.url}>READ MORE</TransparentLink>
                 </Button>
               </ProjectContainer>
             )}

@@ -1,22 +1,23 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { projects } from '../../content/projects';
-import Navbar from '../../components/Navbar';
-import Breadcrumbs from '../../components/Breadcrumbs';
-import styled from 'styled-components';
-import Presentation from './Presentation';
-import Briefing from './Briefing';
-import StyleGuide from './StyleGuide';
-import DesignApproach from './DesignApproach';
-import SiteMap from './SiteMap';
-import Prototypes from './Prototypes';
-import RelatedProjects from './RelatedProjects';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { projects } from "../../content/projects";
+import Navbar from "../../components/Navbar";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import styled from "styled-components";
+import Presentation from "./Presentation";
+import Briefing from "./Briefing";
+import StyleGuide from "./StyleGuide";
+import DesignApproach from "./DesignApproach";
+import SiteMap from "./SiteMap";
+import Prototypes from "./Prototypes";
+import RelatedProjects from "./RelatedProjects";
 
 const Banner = styled.img`
   width: 100vw;
   max-height: 46.875rem;
   object-fit: cover;
 `;
+
 const Content = styled.div`
   padding: 2.5rem 5rem 12.5rem;
 

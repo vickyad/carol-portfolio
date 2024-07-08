@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Typography from "./Typography";
+import { PathType } from "../types/types";
 
 const Container = styled.div`
   display: flex;
@@ -13,12 +15,6 @@ const PathLink = styled(Link)`
   text-decoration: none;
   font-size: 1.125rem;
 `;
-
-const CurrentPage = styled.p`
-  font-weight: bold;
-`;
-
-type PathType = { label: string; link: string };
 
 interface BreadcrumbsProps {
   path: PathType[];
@@ -34,7 +30,7 @@ const Breadcrumbs = ({ path }: BreadcrumbsProps) => {
               <PathLink to={item.link}>{item.label}</PathLink> {">"}
             </>
           ) : (
-            <CurrentPage>{item.label}</CurrentPage>
+            <Typography weight="bold">{item.label}</Typography>
           )}
         </Container>
       ))}

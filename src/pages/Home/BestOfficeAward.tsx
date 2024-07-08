@@ -1,6 +1,7 @@
 import Button from "../../components/Button";
 import bestOfficeAwardBanner from "../../assets/bestofficeaward.png";
 import styled from "styled-components";
+import Typography from "../../components/Typography";
 
 const Container = styled.section`
   display: flex;
@@ -25,11 +26,11 @@ const BestOfficeAward = () => {
   return (
     <Container>
       <InnerContainer>
-        <h2>
+        <Typography size="6xl" variant="primary">
           Winner of the Best Digital Office Award 2023, preferred by ADVBOX
           company.
-        </h2>
-        <p>
+        </Typography>
+        <Typography>
           Collaborating closely with the talented developer, Ygor Combi, we
           successfully created two exceptional websites that recently earned the
           prestigious recognition of being named the best digital websites by
@@ -39,7 +40,7 @@ const BestOfficeAward = () => {
           award-winning digital solutions. We take pride in our collaborative
           efforts and look forward to pushing the boundaries of innovation in
           future projects.
-        </p>
+        </Typography>
         <Button
           handleClick={() => console.log("Not implemmented yet")}
           variant="secondary"

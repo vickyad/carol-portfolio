@@ -1,28 +1,20 @@
-import styled from 'styled-components';
-import { SizeType } from '../types/types';
+import styled from "styled-components";
+import { SizeType } from "../types/types";
+import Typography from "./Typography";
 
 const Container = styled.div`
   border: solid 2px #5e262b;
   border-radius: 1.25rem;
 `;
 
-const Title = styled.h4<{ size: SizeType; color: string }>`
-  font-family: Cooper, Arial, serif;
-  color: #5e262b;
-  font-size: ${(props) => (props.size === 'sm' ? '1.125rem' : '1.5rem')};
+const TitleContainer = styled.div<{ color: string }>`
   background-color: ${(props) => props.color};
   border-radius: 1.25rem 1.25rem 0 0;
   padding: 0.938rem 5.563rem;
-  text-transform: uppercase;
 `;
 
 const TextContainer = styled.div`
   padding: 2.5rem 5.625rem;
-`;
-
-const Paragraph = styled.p<{ size: SizeType }>`
-  font-size: ${(props) => (props.size === 'sm' ? '1.125rem' : '1.25rem')};
-  line-height: 1.875rem;
 `;
 
 const Bold = styled.span`
@@ -36,35 +28,37 @@ interface BoxProps {
   size?: SizeType;
 }
 
-const Box = ({ title, text, color, size = 'base' }: BoxProps) => {
+const Box = ({ title, text, color, size = "xl" }: BoxProps) => {
   const isOptionObject = (
     obj: any
   ): obj is { label: string; value: string } => {
     return (
-      typeof obj === 'object' &&
+      typeof obj === "object" &&
       obj !== null &&
-      'label' in obj &&
-      'value' in obj
+      "label" in obj &&
+      "value" in obj
     );
   };
 
   return (
     <Container>
-      <Title size={size} color={color}>
-        {title}
-      </Title>
+      <TitleContainer color={color}>
+        <Typography size={size} variant="tertiary">
+          {title}
+        </Typography>
+      </TitleContainer>
       <TextContainer>
         {text.map((paragraph, index) =>
           isOptionObject(paragraph) ? (
             <div key={index}>
-              <Paragraph size={size}>
+              <Typography size={size === "3xl" ? "2xl" : size}>
                 <Bold>{paragraph.label}:</Bold> {paragraph.value}
-              </Paragraph>
+              </Typography>
             </div>
           ) : (
-            <Paragraph size={size} key={index}>
+            <Typography size={size === "3xl" ? "2xl" : size} key={index}>
               {paragraph}
-            </Paragraph>
+            </Typography>
           )
         )}
       </TextContainer>

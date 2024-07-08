@@ -1,5 +1,16 @@
 import styled, { keyframes } from "styled-components";
 import Icon from "./Icon";
+import Typography from "./Typography";
+
+const swipe = keyframes`
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+`;
 
 const Inner = styled.div`
   position: relative;
@@ -16,30 +27,10 @@ const Wrapper = styled.div`
   transform: translateY(-50%);
 `;
 
-const Text = styled.p`
-  font-family: Cooper, Arial, serif;
-  text-shadow: 2px 0 #5e262b, -2px 0 #5e262b, 0 2px #5e262b, 0 -2px #5e262b,
-    1px 1px #5e262b, -1px -1px #5e262b, 1px -1px #5e262b, -1px 1px #5e262b,
-    5px 5px 0px #5e262b;
-  color: #fddc86;
-  font-size: 2rem;
-  white-space: nowrap;
-`;
-
-const swipe = keyframes`
-  0% {
-    transform: translate(0);
-  }
-
-  100% {
-    transform: translate(-100%);
-  }
-`;
-
 const Section = styled.div`
   display: flex;
   gap: 1rem;
-  animation: ${swipe} 6000ms linear infinite;
+  animation: ${swipe} 7000ms linear infinite;
   margin-right: 1rem;
 `;
 
@@ -47,14 +38,21 @@ interface BannerProps {
   texts: string[];
 }
 
-const Banner = ({ texts }: BannerProps) => {
+const FooterBanner = ({ texts }: BannerProps) => {
   return (
     <Inner>
       <Wrapper>
         <Section>
           {texts.map((text, index) => (
             <>
-              <Text key={`text_1_${index}`}>{text}</Text>
+              <Typography
+                key={`text_1_${index}`}
+                size="4xl"
+                variant="primary"
+                style={{ whiteSpace: "nowrap" }}
+              >
+                {text}
+              </Typography>
               <Icon type="star" key={`icon_1_${index}`} />
             </>
           ))}
@@ -62,7 +60,14 @@ const Banner = ({ texts }: BannerProps) => {
         <Section>
           {texts.map((text, index) => (
             <>
-              <Text key={`text_2_${index}`}>{text}</Text>
+              <Typography
+                key={`text_2_${index}`}
+                size="4xl"
+                variant="primary"
+                style={{ whiteSpace: "nowrap" }}
+              >
+                {text}
+              </Typography>
               <Icon type="star" key={`icon_2_${index}`} />
             </>
           ))}
@@ -70,7 +75,14 @@ const Banner = ({ texts }: BannerProps) => {
         <Section>
           {texts.map((text, index) => (
             <>
-              <Text key={`text_3_${index}`}>{text}</Text>
+              <Typography
+                key={`text_3_${index}`}
+                size="4xl"
+                variant="primary"
+                style={{ whiteSpace: "nowrap" }}
+              >
+                {text}
+              </Typography>
               <Icon type="star" key={`icon_3_${index}`} />
             </>
           ))}
@@ -78,7 +90,14 @@ const Banner = ({ texts }: BannerProps) => {
         <Section>
           {texts.map((text, index) => (
             <>
-              <Text key={`text_4_${index}`}>{text}</Text>
+              <Typography
+                key={`text_4_${index}`}
+                size="4xl"
+                variant="primary"
+                style={{ whiteSpace: "nowrap" }}
+              >
+                {text}
+              </Typography>
               <Icon type="star" key={`icon_4_${index}`} />
             </>
           ))}
@@ -87,4 +106,4 @@ const Banner = ({ texts }: BannerProps) => {
     </Inner>
   );
 };
-export default Banner;
+export default FooterBanner;

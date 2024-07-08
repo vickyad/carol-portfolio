@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { ColorPaletteType, ModeType } from '../types/types';
+import styled from "styled-components";
+import { ColorPaletteType } from "../types/types";
+import Typography from "./Typography";
 
 const Container = styled.div`
   display: grid;
@@ -18,16 +19,6 @@ const ColorContainer = styled.div<{ color: string }>`
   padding: 1.875rem;
 `;
 
-const Paragraph = styled.p<{ color: ModeType }>`
-  color: ${(props) => (props.color === 'dark' ? '#5E262B' : '#FFFFFF')};
-`;
-
-const ColorName = styled(Paragraph)`
-  font-family: Cooper, Arial, serif;
-  font-weight: bold;
-  text-transform: uppercase;
-`;
-
 interface ColorPaletteProps {
   colorPalette: ColorPaletteType[];
 }
@@ -35,10 +26,24 @@ interface ColorPaletteProps {
 const ColorPalette = ({ colorPalette }: ColorPaletteProps) => {
   return (
     <Container>
-      {colorPalette.map((color) => (
-        <ColorContainer color={color.color}>
-          <ColorName color={color.letterColor}>{color.name}</ColorName>
-          <Paragraph color={color.letterColor}>{color.color}</Paragraph>
+      {colorPalette.map((colorItem) => (
+        <ColorContainer color={colorItem.color}>
+          <Typography
+            variant="tertiary"
+            weight="bold"
+            style={{
+              color: colorItem.letterColor === "dark" ? "#5E262B" : "#FFFFFF",
+            }}
+          >
+            {colorItem.name}
+          </Typography>
+          <Typography
+            style={{
+              color: colorItem.letterColor === "dark" ? "#5E262B" : "#FFFFFF",
+            }}
+          >
+            {colorItem.color}
+          </Typography>
         </ColorContainer>
       ))}
     </Container>

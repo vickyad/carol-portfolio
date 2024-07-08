@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import Typography from "../../components/Typography";
 
 const Container = styled.section`
   display: grid;
@@ -6,15 +7,6 @@ const Container = styled.section`
   gap: 1.125rem 3rem;
   align-items: center;
   margin-top: 8.25rem;
-`;
-
-const Title = styled.h1`
-  grid-row-start: span 2;
-`;
-
-const Subtitle = styled.h3`
-  font-size: 1.5rem;
-  font-weight: bold;
 `;
 
 interface PresentationProps {
@@ -26,11 +18,22 @@ interface PresentationProps {
 const Presentation = ({ title, subtitle, description }: PresentationProps) => {
   return (
     <Container>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
+      <Typography
+        variant="primary"
+        size="6xl"
+        component="h1"
+        style={{ gridRowStart: "span 2" }}
+      >
+        {title}
+      </Typography>
+      <Typography size="3xl" weight="bold">
+        {subtitle}
+      </Typography>
       <div>
         {description.map((paragraph: string, index: number) => (
-          <p key={`description_paragraph_${index}`}>{paragraph}</p>
+          <Typography key={`description_paragraph_${index}`}>
+            {paragraph}
+          </Typography>
         ))}
       </div>
     </Container>

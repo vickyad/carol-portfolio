@@ -11,7 +11,7 @@ const UIComponents = ({ type }: UIComponentsProps) => {
     switch (type) {
       case "deer-park":
         return <DeerPark />;
-      case "poland-spring":
+      case "poland-springs":
         return <PolandSprings />;
       case "sousa-advocacia":
         return <SousaAdvocacia />;

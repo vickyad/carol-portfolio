@@ -3,6 +3,8 @@ import polandSpringsBanner from "../../assets/poland-springs.png";
 import sousaAdvocaciaBanner from "../../assets/sousa-advocacia.png";
 import deerParkBanner from "../../assets/deer-park.png";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
+import Typography from "../../components/Typography";
 
 const Container = styled.section`
   margin: 15.438rem 0 9rem;
@@ -25,7 +27,7 @@ const ProjectsContainer = styled.div`
   gap: 8%;
 `;
 
-const TransparentLink = styled.a`
+const TransparentLink = styled(Link)`
   text-decoration: none;
   color: #ffffff;
 `;
@@ -38,11 +40,6 @@ const ProjectContainer = styled.div`
 
 const ProjectImg = styled.img`
   width: -webkit-fill-available;
-`;
-
-const ProjectName = styled.p`
-  font-size: 2rem;
-  font-weight: bold;
 `;
 
 const projects = [
@@ -77,9 +74,11 @@ const Projects = () => {
         {projects.map((project, index) => (
           <ProjectContainer key={`project_${index}`}>
             <ProjectImg src={project.src} />
-            <ProjectName>{project.name}</ProjectName>
+            <Typography size="4xl" weight="bold">
+              {project.name}
+            </Typography>
             <Button handleClick={() => {}}>
-              <TransparentLink href={project.url}>READ MORE</TransparentLink>
+              <TransparentLink to={project.url}>READ MORE</TransparentLink>
             </Button>
           </ProjectContainer>
         ))}

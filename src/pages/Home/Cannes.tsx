@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import cannesBanner from "../../assets/cannes.png";
 import Button from "../../components/Button";
+import Typography from "../../components/Typography";
 
 const Container = styled.section`
   background-color: #e4d6f5;
@@ -26,13 +27,15 @@ const Cannes = () => {
   return (
     <Container>
       <InnerContainer>
-        <h2>2023 Cannes Lions and Grand Prix Winners</h2>
-        <p>
+        <Typography variant="primary" size="6xl">
+          2023 Cannes Lions and Grand Prix Winners
+        </Typography>
+        <Typography>
           Brazilian pharmaceutical corporation Eurofarma scooped the top prize
           for Scrolling Therapy – a campaign by Dentsu Creative in Buenos Aires,
           São Paulo and New York that enables people with Parkinson’s to
           navigate their social media feeds using facial expressions.
-        </p>
+        </Typography>
         <Button
           handleClick={() => console.log("Not implemmented yet")}
           variant="secondary"

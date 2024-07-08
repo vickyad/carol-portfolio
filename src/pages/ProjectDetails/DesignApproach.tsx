@@ -1,13 +1,6 @@
-import styled from 'styled-components';
-import Box from '../../components/Box';
-
-const Title = styled.h4`
-  font-family: Cooper, Arial, serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 3.75rem 0 2.5rem;
-`;
+import styled from "styled-components";
+import Box from "../../components/Box";
+import Typography from "../../components/Typography";
 
 const BoxContainer = styled.div`
   display: grid;
@@ -22,13 +15,20 @@ interface DesignApproachProps {
 const DesignApproach = ({ designApproach }: DesignApproachProps) => {
   return (
     <section>
-      <Title>DESIGN APPROACH</Title>
+      <Typography
+        size="3xl"
+        variant="tertiary"
+        textAlign="center"
+        style={{ margin: "3.75rem 0 2.5rem" }}
+      >
+        DESIGN APPROACH
+      </Typography>
       <BoxContainer>
         {designApproach.map((item) => (
           <Box
             title={item.title}
             text={[item.text]}
-            size="sm"
+            size="xl"
             color="#B7D9D4"
           />
         ))}

@@ -2,7 +2,9 @@ import styled from "styled-components";
 import footerBg from "../assets/footer_bg.png";
 import logo from "../assets/logo_large.png";
 import Socials from "./Socials";
-import Banner from "./Banner";
+import FooterBanner from "./FooterBanner";
+import Typography from "./Typography";
+import { Link } from "react-router-dom";
 
 const Container = styled.footer`
   position: relative;
@@ -30,7 +32,7 @@ const Content = styled.div`
   gap: 2.5rem;
 `;
 
-const Links = styled.ul`
+const LinksList = styled.ul`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -38,12 +40,9 @@ const Links = styled.ul`
   gap: 4%;
 `;
 
-const ContactMe = styled.p`
-  font-size: 1.25rem;
-`;
-
-const Copyright = styled.span`
-  font-size: 1rem;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  text-transform: uppercase;
 `;
 
 const FooterBgImg = styled.img`
@@ -52,33 +51,36 @@ const FooterBgImg = styled.img`
   left: 0;
   width: 100vw;
 `;
+
 const Footer = () => {
   return (
     <Container>
-      <Banner
+      <FooterBanner
         texts={["UX DESIGN", "UI DESING", "GRAPHIC DESIGN", "ILLUSTRATION"]}
       />
       <InnerContainer>
         <img src={logo} />
         <Content>
-          <Links>
+          <LinksList>
             <li>
-              <a>ABOUT ME</a>
+              <StyledLink to="">ABOUT ME</StyledLink>
             </li>
             <li>
-              <a>WEB DESIGN</a>
+              <StyledLink to="">WEB DESIGN</StyledLink>
             </li>
             <li>
-              <a>GRAPHIC DESIGN</a>
+              <StyledLink to="">GRAPHIC DESIGN</StyledLink>
             </li>
             <li>
-              <a>ILLUSTRATIONS</a>
+              <StyledLink to="">ILLUSTRATIONS</StyledLink>
             </li>
-          </Links>
-          <ContactMe>Contact Me: carolina.silva.w@gmail.com</ContactMe>
+          </LinksList>
+          <Typography size="2xl">
+            Contact Me: carolina.silva.w@gmail.com
+          </Typography>
           <Socials />
         </Content>
-        <Copyright>© 2023 by Carolina Silva da Silva</Copyright>
+        <Typography size="lg">© 2023 by Carolina Silva da Silva</Typography>
       </InnerContainer>
       <FooterBgImg src={footerBg} />
     </Container>

@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import Typography from "../../components/Typography";
 
 const Container = styled.div`
   margin: 12.5rem 0;
@@ -27,8 +28,10 @@ const SiteMap = ({ description, siteMapImg }: SiteMapProps) => {
   return (
     <Container>
       <TitleContainer>
-        <h2>Site Map</h2>
-        <p>{description}</p>
+        <Typography variant="primary" size="6xl">
+          Site Map
+        </Typography>
+        <Typography>{description}</Typography>
       </TitleContainer>
       <Image src={siteMapImg} />
     </Container>
