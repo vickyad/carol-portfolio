@@ -10,9 +10,10 @@ const Nav = styled.nav<{ type: string }>`
   width: -webkit-fill-available;
   background-color: ${(props) =>
     props.type === "primary" ? "transparent" : "#ffffff"};
-  display: grid;
+  display: ${(props) => (props.type === "primary" ? "flex" : "grid")};
+  flex-direction: row;
   grid-template-columns: auto 119px auto;
-  gap: 0 7.25rem;
+  gap: ${(props) => (props.type === "primary" ? "21.875rem" : "0 7.25rem")};
   align-items: center;
   padding: ${(props) =>
     props.type === "primary" ? "3.188rem 10%" : "1.094rem 10%"};
@@ -22,6 +23,7 @@ const LinksList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: -webkit-fill-available;
 `;
 
