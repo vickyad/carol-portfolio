@@ -37,8 +37,9 @@ const Cannes = () => {
           navigate their social media feeds using facial expressions.
         </Typography>
         <Button
-          handleClick={() => console.log("Not implemmented yet")}
+          href="https://eurofarma.com/eurofarma-launches-innovative-digital-tool-for-parkinsons-patients"
           variant="secondary"
+          target="_blank"
         >
           READ MORE
         </Button>

@@ -3,7 +3,6 @@ import polandSpringsBanner from "../../assets/poland-springs.png";
 import sousaAdvocaciaBanner from "../../assets/sousa-advocacia.png";
 import deerParkBanner from "../../assets/deer-park.png";
 import Button from "../../components/Button";
-import { Link } from "react-router-dom";
 import Typography from "../../components/Typography";
 
 const Container = styled.section`
@@ -25,11 +24,6 @@ const ProjectsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   gap: 8%;
-`;
-
-const TransparentLink = styled(Link)`
-  text-decoration: none;
-  color: #ffffff;
 `;
 
 const ProjectContainer = styled.div`
@@ -64,11 +58,13 @@ const Projects = () => {
   return (
     <Container>
       <TextContainer>
-        <h2>Check out some of my work here!</h2>
-        <p>
+        <Typography variant="primary" size="6xl">
+          Check out some of my work here!
+        </Typography>
+        <Typography>
           I've curated some of my best work. You can explore them using the tabs
           below.
-        </p>
+        </Typography>
       </TextContainer>
       <ProjectsContainer>
         {projects.map((project, index) => (
@@ -77,9 +73,7 @@ const Projects = () => {
             <Typography size="4xl" weight="bold">
               {project.name}
             </Typography>
-            <Button handleClick={() => {}}>
-              <TransparentLink to={project.url}>READ MORE</TransparentLink>
-            </Button>
+            <Button href={project.url}>READ MORE</Button>
           </ProjectContainer>
         ))}
       </ProjectsContainer>

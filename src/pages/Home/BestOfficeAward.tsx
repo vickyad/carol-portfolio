@@ -42,8 +42,9 @@ const BestOfficeAward = () => {
           future projects.
         </Typography>
         <Button
-          handleClick={() => console.log("Not implemmented yet")}
+          href="https://bluestudioexpress.estadao.com.br/conteudo/2023/04/05/ganhadores-do-premio-melhores-escritorios-digitais-de-2023/"
           variant="secondary"
+          target="_blank"
         >
           READ MORE
         </Button>

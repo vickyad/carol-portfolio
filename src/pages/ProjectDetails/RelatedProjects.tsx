@@ -3,7 +3,6 @@ import polandSpringsBanner from "../../assets/poland-springs.png";
 import sousaAdvocaciaBanner from "../../assets/sousa-advocacia.png";
 import deerParkBanner from "../../assets/deer-park.png";
 import Button from "../../components/Button";
-import { Link } from "react-router-dom";
 import Typography from "../../components/Typography";
 
 const Container = styled.section`
@@ -14,11 +13,6 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 8%;
-`;
-
-const TransparentLink = styled(Link)`
-  text-decoration: none;
-  color: #ffffff;
 `;
 
 const ProjectContainer = styled.div`
@@ -72,9 +66,7 @@ const RelatedProjects = ({ projectId }: RelatedProjectsProps) => {
                 <Typography size="4xl" weight="bold">
                   {project.name}
                 </Typography>
-                <Button handleClick={() => {}}>
-                  <TransparentLink to={project.url}>READ MORE</TransparentLink>
-                </Button>
+                <Button href={project.url}>READ MORE</Button>
               </ProjectContainer>
             )}
           </>
