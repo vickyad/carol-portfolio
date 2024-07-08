@@ -14,6 +14,7 @@ const Container = styled.div`
 const PathLink = styled(Link)`
   text-decoration: none;
   font-size: 1.125rem;
+  color: #5e262b;
 `;
 
 interface BreadcrumbsProps {
