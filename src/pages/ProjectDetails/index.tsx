@@ -10,7 +10,7 @@ import StyleGuide from "./StyleGuide";
 import DesignApproach from "./DesignApproach";
 import SiteMap from "./SiteMap";
 import Prototypes from "./Prototypes";
-import RelatedProjects from "./RelatedProjects";
+import ProjectCards from "../../components/ProjectCards";
 
 const Banner = styled.img`
   width: 100vw;
@@ -43,7 +43,8 @@ const ProjectDetails = () => {
       (project) => project.id === params.projectName
     );
     setPageContent(project);
-  }, []);
+    window.scrollTo(0, 0);
+  }, [params]);
 
   return (
     <>
@@ -80,7 +81,11 @@ const ProjectDetails = () => {
               siteMapImg={pageContent.siteMapImg}
             />
             <Prototypes prototypes={pageContent.prototypes} />
-            <RelatedProjects projectId={pageContent.id} />
+            <ProjectCards
+              title="Related Projects"
+              projectId={pageContent.id}
+              relatedProjects
+            />
           </Content>
         </div>
       )}

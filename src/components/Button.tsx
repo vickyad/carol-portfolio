@@ -37,6 +37,7 @@ interface ButtonProps {
   variant?: VariantType;
   href: string;
   target?: React.HTMLAttributeAnchorTarget;
+  style?: React.CSSProperties;
 }
 
 const Button = ({
@@ -44,9 +45,10 @@ const Button = ({
   variant = "primary",
   href,
   target,
+  style,
 }: ButtonProps) => {
   return (
-    <Container to={href} variant={variant} target={target}>
+    <Container to={href} variant={variant} target={target} style={style}>
       {children}
     </Container>
   );

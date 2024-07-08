@@ -60,10 +60,10 @@ const StyleGuide = ({
   return (
     <Container>
       <TitleContainer>
-        <Typography variant="primary" size="6xl">
+        <Typography variant="primary" size="6xl" textAlign="center">
           Style Guide
         </Typography>
-        <Typography>{description}</Typography>
+        <Typography textAlign="center">{description}</Typography>
       </TitleContainer>
       <Section>
         <div>

@@ -5,9 +5,9 @@ import heroNightBanner from "../../assets/hero_night.png";
 import scrollImg from "../../assets/scroll.png";
 import AboutMe from "./AboutMe";
 import Cannes from "./Cannes";
-import Projects from "./Projects";
 import BestOfficeAward from "./BestOfficeAward";
 import Testimonials from "./Testimonials";
+import ProjectCards from "../../components/ProjectCards";
 
 const spin = keyframes`
   0% {
@@ -54,7 +54,11 @@ const Home = () => {
       <Content>
         <AboutMe />
         <Cannes />
-        <Projects />
+        <ProjectCards
+          title="Check out some of my work here!"
+          description="I've curated some of my best work. You can explore them using the tabs
+          below."
+        />
         <BestOfficeAward />
         <Testimonials />
       </Content>

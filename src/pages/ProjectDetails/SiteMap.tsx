@@ -28,10 +28,10 @@ const SiteMap = ({ description, siteMapImg }: SiteMapProps) => {
   return (
     <Container>
       <TitleContainer>
-        <Typography variant="primary" size="6xl">
+        <Typography variant="primary" size="6xl" textAlign="center">
           Site Map
         </Typography>
-        <Typography>{description}</Typography>
+        <Typography textAlign="center">{description}</Typography>
       </TitleContainer>
       <Image src={siteMapImg} />
     </Container>
