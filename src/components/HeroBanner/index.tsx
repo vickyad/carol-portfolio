@@ -3,15 +3,22 @@ import heroDayBanner from "../../assets/hero_day.png";
 import heroNightBanner from "../../assets/hero_night.png";
 import { useEffect, useRef, useState } from "react";
 
-const expand = keyframes<{ position: number[] }>`
-  0% {
+/*
+ from {
     clip-path: ${(props) =>
       `circle(10% at ${props.position[0]}% ${props.position[1]}%)`};
   }
-
-  100% {
+  to {
     clip-path: ${(props) =>
       `circle(100% at ${props.position[0]}% ${props.position[1]}%)`};
+  }
+ */
+const expand = keyframes<{ position: number[] }>`
+  from {
+    clip-path:circle(10% at 50% 50%);
+  }
+  to {
+    clip-path: circle(100% at 50% 50%);
   }
 `;
 
@@ -67,9 +74,9 @@ const HeroBanner = () => {
 
   const handleBannerClick = () => {
     setTransition(true);
+    const newTopBanner = bottomBanner;
 
     const timer = setTimeout(() => {
-      const newTopBanner = bottomBanner;
       setBottomBanner(topBanner);
       setTopBanner(newTopBanner);
       setTransition(false);
