@@ -1,13 +1,12 @@
 import styled, { keyframes } from "styled-components";
 import Navbar from "../../components/Navbar";
-import heroDayBanner from "../../assets/hero_day.png";
-import heroNightBanner from "../../assets/hero_night.png";
 import scrollImg from "../../assets/scroll.png";
 import AboutMe from "./AboutMe";
 import Cannes from "./Cannes";
 import BestOfficeAward from "./BestOfficeAward";
 import Testimonials from "./Testimonials";
 import ProjectCards from "../../components/ProjectCards";
+import HeroBanner from "../../components/HeroBanner";
 
 const spin = keyframes`
   0% {
@@ -17,11 +16,6 @@ const spin = keyframes`
   100% {
     transform: translateY(-50%) rotate(360deg);
   }
-`;
-
-const HeroImg = styled.img`
-  width: 100vw;
-  height: auto;
 `;
 
 const ScrollImg = styled.img`
@@ -44,12 +38,11 @@ const Content = styled.div`
 
 const Home = () => {
   const isDarkMode = new Date().getHours() <= 5 || new Date().getHours() >= 18;
-  const heroBanner = isDarkMode ? heroNightBanner : heroDayBanner;
 
   return (
     <div>
       <Navbar mode={isDarkMode ? "dark" : "light"} />
-      <HeroImg src={heroBanner} />
+      <HeroBanner />
       <ScrollImg src={scrollImg} />
       <Content>
         <AboutMe />
