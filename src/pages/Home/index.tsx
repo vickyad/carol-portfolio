@@ -7,6 +7,7 @@ import BestOfficeAward from "./BestOfficeAward";
 import Testimonials from "./Testimonials";
 import ProjectCards from "../../components/ProjectCards";
 import HeroBanner from "../../components/HeroBanner";
+import { useEffect, useState } from "react";
 
 const spin = keyframes`
   0% {
@@ -37,11 +38,8 @@ const Content = styled.div`
 `;
 
 const Home = () => {
-  const isDarkMode = new Date().getHours() <= 5 || new Date().getHours() >= 18;
-
   return (
     <div>
-      <Navbar mode={isDarkMode ? "dark" : "light"} />
       <HeroBanner />
       <ScrollImg src={scrollImg} />
       <Content>

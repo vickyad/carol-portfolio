@@ -2,20 +2,7 @@ import styled from "styled-components";
 import heroDayBanner from "../../assets/hero_day.png";
 import heroNightBanner from "../../assets/hero_night.png";
 import { useEffect, useRef, useState } from "react";
-
-const HeroImg = styled.img<{
-  position: number[];
-  transition: boolean;
-  topImage: boolean;
-}>`
-  width: 100vw;
-  height: auto;
-  max-height: 67.5rem;
-  object-fit: cover;
-  ${(props) =>
-    props.topImage ? TopBanner(props.position, props.transition) : ""}
-  transition: ${(props) => (props.transition ? "clip-path 1000ms" : "none")}
-`;
+import Navbar from "../Navbar";
 
 const Container = styled.div`
   position: relative;
@@ -30,6 +17,21 @@ const Container = styled.div`
   }
 `;
 
+const HeroImg = styled.img<{
+  position: number[];
+  transition: boolean;
+  topImage: boolean;
+}>`
+  width: 100vw;
+  height: auto;
+  max-height: 67.5rem;
+  object-fit: cover;
+  transition: ${(props) => (props.transition ? "clip-path 1000ms" : "none")};
+
+  ${(props) =>
+    props.topImage ? TopBanner(props.position, props.transition) : ""};
+`;
+
 const TopBanner = (position: number[], transition: boolean) => `
   position: absolute;
   bottom: 0;
@@ -40,10 +42,11 @@ const TopBanner = (position: number[], transition: boolean) => `
 `;
 
 const HeroBanner = () => {
+  const isDarkMode = new Date().getHours() <= 5 || new Date().getHours() >= 18;
+
   const ref = useRef<any>(null);
   const nightBannerRef = useRef<any>(null);
 
-  const isDarkMode = new Date().getHours() <= 5 || new Date().getHours() >= 18;
   const [bannerWidth, setBannerWidth] = useState(0);
   const [bannerHeight, setBannerHeight] = useState(0);
 
@@ -143,6 +146,7 @@ const HeroBanner = () => {
       onMouseMove={(event) => handleMouseMove(event)}
       onClick={handleBannerClick}
     >
+      <Navbar mode={bottomBanner === heroNightBanner ? "dark" : "light"} />
       <HeroImg
         src={heroDayBanner}
         position={[

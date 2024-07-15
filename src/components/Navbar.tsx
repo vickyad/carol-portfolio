@@ -17,6 +17,7 @@ const Nav = styled.nav<{ type: string }>`
   align-items: center;
   padding: ${(props) =>
     props.type === "primary" ? "3.188rem 10%" : "1.094rem 10%"};
+  z-index: 5;
 `;
 
 const LinksList = styled.ul`
@@ -31,6 +32,7 @@ const StyledLink = styled(Link)<{ mode: ModeType }>`
   text-decoration: none;
   text-transform: uppercase;
   color: ${(props) => (props.mode === "light" ? "#5e262b" : "#ffffff")};
+  transition: color 100ms;
 `;
 
 interface NavbarProps {
