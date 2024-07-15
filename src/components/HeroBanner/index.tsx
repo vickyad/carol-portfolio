@@ -67,7 +67,7 @@ const HeroBanner = () => {
         bottomBanner === heroNightBanner ? heroDayBanner : heroNightBanner
       );
       setTransition(false);
-    }, 1000);
+    }, 500);
 
     return () => {
       clearTimeout(timer);
