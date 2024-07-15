@@ -18,13 +18,13 @@ const TextContainer = styled.div`
 const ThankYou = () => {
   return (
     <Container>
-      <img src={melImg} />
+      <img src={melImg} alt="" />
       <TextContainer>
         <Typography size="6xl" variant="primary" textAlign="center">
           Thank You for Watching
         </Typography>
       </TextContainer>
-      <img src={charlizeImg} />
+      <img src={charlizeImg} alt="" />
     </Container>
   );
 };

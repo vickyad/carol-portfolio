@@ -1,27 +1,7 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import heroDayBanner from "../../assets/hero_day.png";
 import heroNightBanner from "../../assets/hero_night.png";
 import { useEffect, useRef, useState } from "react";
-
-/*
- from {
-    clip-path: ${(props) =>
-      `circle(10% at ${props.position[0]}% ${props.position[1]}%)`};
-  }
-  to {
-    clip-path: ${(props) =>
-      `circle(100% at ${props.position[0]}% ${props.position[1]}%)`};
-  }
- */
-
-const expand = keyframes<{ position: number[] }>`
-  from {
-    clip-path:circle(10% at 50% 50%);
-  }
-  to {
-    clip-path: circle(100% at 50% 50%);
-  }
-`;
 
 const HeroImg = styled.img<{
   position: number[];
@@ -34,6 +14,7 @@ const HeroImg = styled.img<{
   object-fit: cover;
   ${(props) =>
     props.topImage ? TopBanner(props.position, props.transition) : ""}
+  transition: ${(props) => (props.transition ? "clip-path 1000ms" : "none")}
 `;
 
 const Container = styled.div`
@@ -53,22 +34,21 @@ const TopBanner = (position: number[], transition: boolean) => `
   position: absolute;
   bottom: 0;
   left: 0;
-  clip-path: ${`circle(10% at ${position[0]}% ${position[1]}%)`};
-  animation: ${transition ? expand : "none"} 1000ms ease-out;
-  
+  clip-path: ${`circle(${transition ? "100%" : "10%"} at ${position[0]}% ${
+    position[1]
+  }%)`};
 `;
 
 const HeroBanner = () => {
   const ref = useRef<any>(null);
+  const nightBannerRef = useRef<any>(null);
+
   const isDarkMode = new Date().getHours() <= 5 || new Date().getHours() >= 18;
   const [bannerWidth, setBannerWidth] = useState(0);
   const [bannerHeight, setBannerHeight] = useState(0);
 
   const [bottomBanner, setBottomBanner] = useState(
     isDarkMode ? heroNightBanner : heroDayBanner
-  );
-  const [topBanner, setTopBanner] = useState(
-    !isDarkMode ? heroNightBanner : heroDayBanner
   );
 
   const [cursorPosition, setCursorPosition] = useState([0, 0]);
@@ -81,11 +61,11 @@ const HeroBanner = () => {
 
   const handleBannerClick = () => {
     setTransition(true);
-    const newTopBanner = bottomBanner;
 
     const timer = setTimeout(() => {
-      setBottomBanner(topBanner);
-      setTopBanner(newTopBanner);
+      setBottomBanner(
+        bottomBanner === heroNightBanner ? heroDayBanner : heroNightBanner
+      );
       setTransition(false);
     }, 1000);
 
@@ -95,12 +75,14 @@ const HeroBanner = () => {
   };
 
   useEffect(() => {
-    if (bottomBanner !== heroNightBanner) return;
+    if (bottomBanner === heroDayBanner) {
+      return;
+    }
 
     const fireflies = 25;
-    const container = ref.current;
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
+    const container = nightBannerRef.current;
+    const containerWidth = window.innerWidth;
+    const containerHeight = window.innerHeight;
 
     const createFirefly = () => {
       const firefly = document.createElement("div");
@@ -130,7 +112,7 @@ const HeroBanner = () => {
             elm.style.opacity = "1";
             setTimeout(animate, delay * 1000);
           }, fadeDuration * 1000);
-        }, duration * 1000);
+        }, duration * 500);
       };
 
       setTimeout(animate, delay * 1000);
@@ -153,7 +135,7 @@ const HeroBanner = () => {
   useEffect(() => {
     setBannerWidth(ref.current ? ref.current.offsetWidth : 0);
     setBannerHeight(ref.current ? ref.current.offsetHeight : 0);
-  }, [ref.current]);
+  }, []);
 
   return (
     <Container
@@ -162,23 +144,25 @@ const HeroBanner = () => {
       onClick={handleBannerClick}
     >
       <HeroImg
-        src={topBanner}
+        src={heroDayBanner}
         position={[
           (cursorPosition[0] / bannerWidth) * 100,
           (cursorPosition[1] / bannerHeight) * 100,
         ]}
         transition={transition}
-        topImage={true}
+        topImage={bottomBanner === heroNightBanner}
       />
-      <HeroImg
-        src={bottomBanner}
-        position={[
-          (cursorPosition[0] / bannerWidth) * 100,
-          (cursorPosition[1] / bannerHeight) * 100,
-        ]}
-        transition={transition}
-        topImage={false}
-      />
+      <div ref={nightBannerRef}>
+        <HeroImg
+          src={heroNightBanner}
+          position={[
+            (cursorPosition[0] / bannerWidth) * 100,
+            (cursorPosition[1] / bannerHeight) * 100,
+          ]}
+          transition={transition}
+          topImage={bottomBanner === heroDayBanner}
+        />
+      </div>
     </Container>
   );
 };
