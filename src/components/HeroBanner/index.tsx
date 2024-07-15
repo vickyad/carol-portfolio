@@ -13,6 +13,7 @@ import { useEffect, useRef, useState } from "react";
       `circle(100% at ${props.position[0]}% ${props.position[1]}%)`};
   }
  */
+
 const expand = keyframes<{ position: number[] }>`
   from {
     clip-path:circle(10% at 50% 50%);
@@ -22,11 +23,17 @@ const expand = keyframes<{ position: number[] }>`
   }
 `;
 
-const HeroImg = styled.img`
+const HeroImg = styled.img<{
+  position: number[];
+  transition: boolean;
+  topImage: boolean;
+}>`
   width: 100vw;
   height: auto;
   max-height: 67.5rem;
   object-fit: cover;
+  ${(props) =>
+    props.topImage ? TopBanner(props.position, props.transition) : ""}
 `;
 
 const Container = styled.div`
@@ -42,13 +49,13 @@ const Container = styled.div`
   }
 `;
 
-const TopImg = styled(HeroImg)<{ position: number[]; transition: boolean }>`
+const TopBanner = (position: number[], transition: boolean) => `
   position: absolute;
   bottom: 0;
   left: 0;
-  clip-path: ${(props) =>
-    `circle(10% at ${props.position[0]}% ${props.position[1]}%)`};
-  animation: ${(props) => (props.transition ? expand : "none")} 1000ms ease-out;
+  clip-path: ${`circle(10% at ${position[0]}% ${position[1]}%)`};
+  animation: ${transition ? expand : "none"} 1000ms ease-out;
+  
 `;
 
 const HeroBanner = () => {
@@ -154,15 +161,24 @@ const HeroBanner = () => {
       onMouseMove={(event) => handleMouseMove(event)}
       onClick={handleBannerClick}
     >
-      <TopImg
+      <HeroImg
         src={topBanner}
         position={[
           (cursorPosition[0] / bannerWidth) * 100,
           (cursorPosition[1] / bannerHeight) * 100,
         ]}
         transition={transition}
+        topImage={true}
       />
-      <HeroImg src={bottomBanner} />
+      <HeroImg
+        src={bottomBanner}
+        position={[
+          (cursorPosition[0] / bannerWidth) * 100,
+          (cursorPosition[1] / bannerHeight) * 100,
+        ]}
+        transition={transition}
+        topImage={false}
+      />
     </Container>
   );
 };
