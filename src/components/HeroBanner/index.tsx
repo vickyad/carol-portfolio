@@ -113,12 +113,12 @@ const HeroBanner = () => {
           elm.style.opacity = "0";
           setTimeout(() => {
             elm.style.opacity = "1";
-            setTimeout(animate, delay * 1000);
-          }, fadeDuration * 1000);
+            setTimeout(animate, delay * 100);
+          }, fadeDuration * 100);
         }, duration * 500);
       };
 
-      setTimeout(animate, delay * 1000);
+      setTimeout(animate, delay * 100);
     };
 
     for (let i = 0; i < fireflies; i++) {
