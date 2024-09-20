@@ -1,14 +1,14 @@
-import deerParkBanner from "../assets/deer_park_banner.png";
-import deerParkTablet from "../assets/tablet_deer_park.png";
-import deerParkMap from "../assets/deer_park_map.png";
+import deerParkBanner from "../assets/deer_park/deer_park_banner.png";
+import deerParkTablet from "../assets/deer_park/tablet_deer_park.png";
+import deerParkMap from "../assets/deer_park/deer_park_map.png";
 
-import sousaAdvocaciaBanner from "../assets/sousa_advocacia_banner.png";
-import sousaAdvocaciaTablet from "../assets/tablet_sousa_advocacia.png";
-import sousaAdvocaciaMap from "../assets/sousa_advocacia_map.png";
+import sousaAdvocaciaBanner from "../assets/sousa_advocacia/sousa_advocacia_banner.png";
+import sousaAdvocaciaTablet from "../assets/sousa_advocacia/tablet_sousa_advocacia.png";
+import sousaAdvocaciaMap from "../assets/sousa_advocacia/sousa_advocacia_map.png";
 
-import polandSpringBanner from "../assets/poland_spring_banner.png";
-import polandSpringTablet from "../assets/tablet_poland_spring.png";
-import polandSpringMap from "../assets/poland_spring_map.png";
+import polandSpringBanner from "../assets/poland_spring/poland_spring_banner.png";
+import polandSpringTablet from "../assets/poland_spring/tablet_poland_spring.png";
+import polandSpringMap from "../assets/poland_spring/poland_spring_map.png";
 
 export const projects = [
   {

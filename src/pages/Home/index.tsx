@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import Navbar from "../../components/Navbar";
 import scrollImg from "../../assets/scroll.png";
 import AboutMe from "./AboutMe";
 import Cannes from "./Cannes";
@@ -7,7 +6,6 @@ import BestOfficeAward from "./BestOfficeAward";
 import Testimonials from "./Testimonials";
 import ProjectCards from "../../components/ProjectCards";
 import HeroBanner from "../../components/HeroBanner";
-import { useEffect, useState } from "react";
 
 const spin = keyframes`
   0% {

@@ -1,12 +1,13 @@
-import eduImg from "../assets/edu.png";
-import isaImg from "../assets/isabella.png";
+import eduImg from "../assets/testimonials/edu.png";
+import isaImg from "../assets/testimonials/isabella.png";
+import barbaraImg from "../assets/testimonials/barbara.png";
 
 export const testimonials = [
   {
-    text: "A Carol não apenas aproveita cada oportunidade, mas também entrega resultados impressionantes. Mal posso esperar para ter a chance de trabalhar novamente com essa excelente profissional!",
-    authorSrc: isaImg,
-    authorName: "Isabella Salles",
-    authorPosition: "Senior UX / UI",
+    text: "A Carol é uma ótima Product Designer, com experiência em projetos nacionais e internacionais. Muito focada em entregar o melhor UI e a melhor experiência do usuário.",
+    authorSrc: barbaraImg,
+    authorName: "Barbara Cavalheiro",
+    authorPosition: "Product Designer",
     cardColor: "#FDDC86",
   },
   {

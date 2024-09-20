@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import heroDayBanner from "../../assets/hero_day.png";
-import heroNightBanner from "../../assets/hero_night.png";
+import heroDayBanner from "../../assets/hero/hero_day.png";
+import heroNightBanner from "../../assets/hero/hero_night.png";
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../Navbar";
 

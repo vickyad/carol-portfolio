@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import melImg from "../assets/Mel.png";
-import charlizeImg from "../assets/Charlize.png";
+import melImg from "../assets/dogs/Mel.png";
+import charlizeImg from "../assets/dogs/Charlize.png";
 import Typography from "./Typography";
 
 const Container = styled.div`
