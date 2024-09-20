@@ -43,7 +43,7 @@ const AbilityContainer = styled.div`
 
 const AboutMe = () => {
   return (
-    <Container>
+    <Container id="about_me_section">
       <AboutMeImg src={aboutMeImg} />
       <InnerContainer>
         <Typography size="8xl" component="h1" variant="primary">

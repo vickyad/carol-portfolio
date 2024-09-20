@@ -33,6 +33,10 @@ const StyledLink = styled(Link)<{ mode: ModeType }>`
   text-transform: uppercase;
   color: ${(props) => (props.mode === "light" ? "#5e262b" : "#ffffff")};
   transition: color 100ms;
+
+  &:hover {
+    color: ${(props) => (props.mode === "light" ? "#ffffff" : "#5e262b")};
+  }
 `;
 
 interface NavbarProps {
@@ -51,12 +55,12 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
         </li>
         <li>
           <StyledLink mode={mode} to="">
-            Web design
+            Cannes Lions
           </StyledLink>
         </li>
         <li>
           <StyledLink mode={mode} to="">
-            Graphic Design
+            Projects
           </StyledLink>
         </li>
       </LinksList>
@@ -64,12 +68,12 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
       <LinksList>
         <li>
           <StyledLink mode={mode} to="">
-            Illustrations
+            Awards
           </StyledLink>
         </li>
         <li>
           <StyledLink mode={mode} to="">
-            Contact me
+            Testimonials
           </StyledLink>
         </li>
         <li>

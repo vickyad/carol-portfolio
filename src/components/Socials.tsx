@@ -19,7 +19,24 @@ const Socials = ({ size = "base", mode = "light" }: SocialsProps) => {
   return (
     <Container size={size}>
       <li>
-        <Link to="">
+        <Link
+          to="https://www.instagram.com/carola_art_/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon
+            type="instagram"
+            size={size}
+            color={mode === "light" ? "#5e262b" : "#ffffff"}
+          />
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="https://www.linkedin.com/in/carolina-s-da-silva/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon
             type="linkedin"
             size={size}
@@ -28,27 +45,13 @@ const Socials = ({ size = "base", mode = "light" }: SocialsProps) => {
         </Link>
       </li>
       <li>
-        <Link to="">
+        <Link
+          to="https://dribbble.com/CarolinaSdaSilva"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon
-            type="instagram"
-            size={size}
-            color={mode === "light" ? "#5e262b" : "#ffffff"}
-          />
-        </Link>
-      </li>
-      <li>
-        <Link to="">
-          <Icon
-            type="instagram"
-            size={size}
-            color={mode === "light" ? "#5e262b" : "#ffffff"}
-          />
-        </Link>
-      </li>
-      <li>
-        <Link to="">
-          <Icon
-            type="instagram"
+            type="dribble"
             size={size}
             color={mode === "light" ? "#5e262b" : "#ffffff"}
           />

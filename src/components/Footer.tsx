@@ -59,6 +59,11 @@ const DevLink = styled(Link)`
   text-decoration: none;
 `;
 
+const TransparentLink = styled(Link)`
+  color: #5e262b;
+  text-decoration: none;
+`;
+
 const Footer = () => {
   return (
     <Container>
@@ -83,7 +88,10 @@ const Footer = () => {
             </li>
           </LinksList>
           <Typography size="2xl">
-            Contact Me: carolina.silva.w@gmail.com
+            Contact Me:{" "}
+            <TransparentLink to="mailto:carolina.silva.w@gmail.com">
+              carolina.silva.w@gmail.com
+            </TransparentLink>
           </Typography>
           <Socials />
         </Content>
