@@ -71,7 +71,7 @@ const AuthorImg = styled.img`
 
 const Testimonials = () => {
   return (
-    <Container>
+    <Container id="testimonials_section">
       <TextContainer>
         <Typography variant="primary" size="6xl" textAlign="center">
           Testimonials

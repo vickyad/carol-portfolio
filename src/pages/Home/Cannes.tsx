@@ -25,7 +25,7 @@ const BannerImg = styled.img`
 
 const Cannes = () => {
   return (
-    <Container>
+    <Container id="cannes_lions_section">
       <InnerContainer>
         <Typography variant="primary" size="6xl">
           2023 Cannes Lions and Grand Prix Winners

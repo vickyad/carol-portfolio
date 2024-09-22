@@ -47,7 +47,7 @@ const ProjectDetails = () => {
   }, [params]);
 
   return (
-    <>
+    <div id="projects_section">
       {pageContent && (
         <div>
           <Navbar type="secondary" />
@@ -89,7 +89,7 @@ const ProjectDetails = () => {
           </Content>
         </div>
       )}
-    </>
+    </div>
   );
 };
 export default ProjectDetails;

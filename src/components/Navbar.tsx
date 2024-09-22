@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Socials from "./Socials";
 import { ModeType, VariantType } from "../types/types";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import Icon from "./Icon";
 
 const Nav = styled.nav<{ type: string }>`
@@ -51,17 +51,17 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
     <Nav type={type}>
       <LinksList>
         <li>
-          <StyledLink mode={mode} type={type} to="/">
+          <StyledLink mode={mode} type={type} to="/#about_me_section" smooth>
             About me
           </StyledLink>
         </li>
         <li>
-          <StyledLink mode={mode} type={type} to="/">
+          <StyledLink mode={mode} type={type} to="/#cannes_lions_section">
             Cannes Lions
           </StyledLink>
         </li>
         <li>
-          <StyledLink mode={mode} type={type} to="/">
+          <StyledLink mode={mode} type={type} to="/#projects_section">
             Projects
           </StyledLink>
         </li>
@@ -69,12 +69,12 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
       {type === "secondary" && <Icon type="logo" size="sm" />}
       <LinksList>
         <li>
-          <StyledLink mode={mode} type={type} to="/">
+          <StyledLink mode={mode} type={type} to="/#awards_section">
             Awards
           </StyledLink>
         </li>
         <li>
-          <StyledLink mode={mode} type={type} to="/">
+          <StyledLink mode={mode} type={type} to="/#testimonials_section">
             Testimonials
           </StyledLink>
         </li>

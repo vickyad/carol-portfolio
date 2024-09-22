@@ -24,7 +24,7 @@ const BannerImg = styled.img`
 
 const BestOfficeAward = () => {
   return (
-    <Container>
+    <Container id="awards_section">
       <InnerContainer>
         <Typography size="6xl" variant="primary">
           Winner of the Best Digital Office Award 2023, preferred by ADVBOX
