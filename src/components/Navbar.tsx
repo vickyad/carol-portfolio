@@ -66,7 +66,11 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
           </StyledLink>
         </li>
       </LinksList>
-      {type === "secondary" && <Icon type="logo" size="sm" />}
+      {type === "secondary" && (
+        <Link to="/">
+          <Icon type="logo" size="sm" />
+        </Link>
+      )}
       <LinksList>
         <li>
           <StyledLink mode={mode} type={type} to="/#awards_section">
