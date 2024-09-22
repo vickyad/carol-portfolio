@@ -72,7 +72,7 @@ const ProjectCards = ({
   );
 
   return (
-    <Container>
+    <Container id="projects_section">
       <TextContainer>
         <Typography variant="primary" size="6xl" textAlign="center">
           {title}
