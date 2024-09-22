@@ -1,14 +1,32 @@
 import deerParkBanner from "../assets/deer_park/deer_park_banner.png";
 import deerParkTablet from "../assets/deer_park/tablet_deer_park.png";
 import deerParkMap from "../assets/deer_park/deer_park_map.png";
+import deerParkVideoContactUs from "../assets/deer_park/videos/Contact_Us_deerpark.mp4";
+import deerParkVideoFaq from "../assets/deer_park/videos/Faq_deerpark.mp4";
+import deerParkVideoHomepage from "../assets/deer_park/videos/Homepage_deerpark.mp4";
+import deerParkVideoOurSprings from "../assets/deer_park/videos/Our_Springs_deerpark.mp4";
+import deerParkVideoProductDetail from "../assets/deer_park/videos/Product_detail_deerpark.mp4";
+import deerParkVideoProductLandingPage from "../assets/deer_park/videos/Product_landing_page_deerpark.mp4";
 
 import sousaAdvocaciaBanner from "../assets/sousa_advocacia/sousa_advocacia_banner.png";
 import sousaAdvocaciaTablet from "../assets/sousa_advocacia/tablet_sousa_advocacia.png";
 import sousaAdvocaciaMap from "../assets/sousa_advocacia/sousa_advocacia_map.png";
+import sousaAdvocaciaVideoAboutUs from "../assets/sousa_advocacia/videos/About_us_souza.mp4";
+import sousaAdvocaciaVideoBlog from "../assets/sousa_advocacia/videos/Blog_souza.mp4";
+import sousaAdvocaciaVideoContactUs from "../assets/sousa_advocacia/videos/Contact_Us_souza.mp4";
+import sousaAdvocaciaVideoFaq from "../assets/sousa_advocacia/videos/FAQ_souza.mp4";
+import sousaAdvocaciaVideoHomepage from "../assets/sousa_advocacia/videos/Homepage_souza.mp4";
+import sousaAdvocaciaVideoProductLandingPage from "../assets/sousa_advocacia/videos/Product_landing_page_souza.mp4";
+import sousaAdvocaciaVideoSocialProjects from "../assets/sousa_advocacia/videos/social_projects_souza.mp4";
 
 import polandSpringBanner from "../assets/poland_spring/poland_spring_banner.png";
 import polandSpringTablet from "../assets/poland_spring/tablet_poland_spring.png";
 import polandSpringMap from "../assets/poland_spring/poland_spring_map.png";
+import polandSpringVideoContactUs from "../assets/poland_spring/videos/Contactus_polandsprings.mp4";
+import polandSpringVideoFaq from "../assets/poland_spring/videos/Faq_polandsprings.mp4";
+import polandSpringVideoHomepage from "../assets/poland_spring/videos/Homepage_polandsprings.mp4";
+import polandSpringVideoLandingPage from "../assets/poland_spring/videos/Planding_polandsprings.mp4";
+import polandSpringVideoProductDetail from "../assets/poland_spring/videos/Product_Detail_polandsprings.mp4";
 
 export const projects = [
   {
@@ -92,37 +110,37 @@ export const projects = [
         title: "Home Page",
         description:
           "On the homepage, we highlight the qualities of the water and the characteristics of the springs to emphasize the excellence of their products. We also include various images of people doing good deeds to showcase the company's ongoing contribution to sustainability and inspire users to make a difference as well.",
-        video: "",
+        video: deerParkVideoHomepage,
       },
       {
         title: "Our Springs Page",
         description:
           "On this page, we encourage users to explore and learn more about all the springs from which Deer Park Water is sourced. By providing this information, we aim to foster a greater sense of recognition and connection between the buyer and the product, enhancing their understanding and appreciation of its origins.",
-        video: "",
+        video: deerParkVideoOurSprings,
       },
       {
         title: "Product Landing Page",
         description:
           "In this section, we present the company's entire range of products in a clean layout to facilitate navigation. We also include relevant information about each product, encouraging users to explore further.",
-        video: "",
+        video: deerParkVideoProductLandingPage,
       },
       {
         title: "Product Detail Page",
         description:
           "On this page, we provide more detailed information about the selected product and its production, and also indicate where it can be purchased.",
-        video: "",
+        video: deerParkVideoProductDetail,
       },
       {
         title: "Contact Us Page",
         description:
           "We have incorporated all the relevant information so that users can contact the company while maintaining a visual identity consistent with the rest of the site.",
-        video: "",
+        video: deerParkVideoContactUs,
       },
       {
         title: "FAQ Page",
         description:
           "On this page, we follow the same approach as the 'Contact Us' section, highlighting the most relevant information in a minimalist and simplified manner to ensure easy navigation.",
-        video: "",
+        video: deerParkVideoFaq,
       },
     ],
   },
@@ -214,43 +232,43 @@ export const projects = [
         title: "Home Page",
         description:
           "On the main page of the website, we use photos of real people to create a connection between the customer and the product offered. Additionally, we present solid and well-explained reasons for users to trust the company's quality, utilizing icons and images to facilitate understanding.",
-        video: "",
+        video: sousaAdvocaciaVideoHomepage,
       },
       {
         title: "About Us Page",
         description:
           "On this page, we want to emphasize the reasons why users can trust the Souza team and the exceptional work they do. Therefore, we provide comprehensive information about the company's extensive years of operation and detailed profiles of the associated lawyers who contribute to their success.",
-        video: "",
+        video: sousaAdvocaciaVideoAboutUs,
       },
       {
         title: "Product Landing Page",
         description:
           "On this page, we provide relevant information accompanied by images to facilitate user searches. Our approach is designed to be intuitive, allowing users to quickly find what they need. The information is organized clearly and accessibly, with visual support that enhances understanding and navigation.",
-        video: "",
+        video: sousaAdvocaciaVideoProductLandingPage,
       },
       {
         title: "Social Projects Page",
         description:
           "On this page, our goal is not only to explain the social projects in which the company is involved and where it operates, but also to provide concrete data that prove the authenticity of the donations and the positive impact they have had on communities.",
-        video: "",
+        video: sousaAdvocaciaVideoSocialProjects,
       },
       {
         title: "Blog",
         description:
           "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
-        video: "",
+        video: sousaAdvocaciaVideoBlog,
       },
       {
         title: "Contact Us Page",
         description:
           "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
-        video: "",
+        video: sousaAdvocaciaVideoContactUs,
       },
       {
         title: "FAQ Page",
         description:
           "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
-        video: "",
+        video: sousaAdvocaciaVideoFaq,
       },
     ],
   },
@@ -345,31 +363,31 @@ export const projects = [
         title: "Home Page",
         description:
           "On the homepage, we highlight the main values that the company wants to convey to its customers, demonstrating their commitment to the community and showcasing the company's sustainability and the social projects in which they participate. Additionally, we provide relevant information about their water qualities and the production process, ensuring transparency and trust.",
-        video: "",
+        video: polandSpringVideoHomepage,
       },
       {
         title: "Product Landing Page",
         description:
           "On this page, we present relevant information about all the products offered by the company. Alongside the product photos, we have included images of the region to highlight the company's spirit.",
-        video: "",
+        video: polandSpringVideoLandingPage,
       },
       {
         title: "Product Detail Page",
         description:
           "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
-        video: "",
+        video: polandSpringVideoProductDetail,
       },
       {
         title: "Contact Us Page",
         description:
           "On this page, we provide comprehensive and easily accessible information for users to contact the company, ensuring clarity and conciseness.",
-        video: "",
+        video: polandSpringVideoContactUs,
       },
       {
         title: "FAQ Page",
         description:
           "On this page, we provide more detailed information about the products, such as nutritional information and ingredients, as well as a selection of products related to the chosen item, while maintaining the brand's established identity and values.",
-        video: "",
+        video: polandSpringVideoFaq,
       },
     ],
   },

@@ -24,7 +24,10 @@ const Prototypes = ({ prototypes }: PrototypesProps) => {
             </Typography>
             <Typography>{prototype.description}</Typography>
           </Container>
-          <span>VIDEO HERE</span>
+          <video width="100%" controls>
+            <source src={prototype.video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       ))}
       <ThankYou />

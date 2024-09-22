@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Socials from "./Socials";
 import { ModeType, VariantType } from "../types/types";
 import { Link } from "react-router-dom";
@@ -28,15 +28,17 @@ const LinksList = styled.ul`
   width: -webkit-fill-available;
 `;
 
-const StyledLink = styled(Link)<{ mode: ModeType }>`
+const StyledLink = styled(Link)<{ mode: ModeType; type: string }>`
   text-decoration: none;
   text-transform: uppercase;
   color: ${(props) => (props.mode === "light" ? "#5e262b" : "#ffffff")};
   transition: color 100ms;
 
-  &:hover {
-    color: ${(props) => (props.mode === "light" ? "#ffffff" : "#5e262b")};
-  }
+  ${(props) =>
+    props.type === "primary" &&
+    css`
+      color: transparent;
+    `};
 `;
 
 interface NavbarProps {
@@ -49,17 +51,17 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
     <Nav type={type}>
       <LinksList>
         <li>
-          <StyledLink mode={mode} to="">
+          <StyledLink mode={mode} type={type} to="/">
             About me
           </StyledLink>
         </li>
         <li>
-          <StyledLink mode={mode} to="">
+          <StyledLink mode={mode} type={type} to="/">
             Cannes Lions
           </StyledLink>
         </li>
         <li>
-          <StyledLink mode={mode} to="">
+          <StyledLink mode={mode} type={type} to="/">
             Projects
           </StyledLink>
         </li>
@@ -67,17 +69,17 @@ const Navbar = ({ mode = "light", type = "primary" }: NavbarProps) => {
       {type === "secondary" && <Icon type="logo" size="sm" />}
       <LinksList>
         <li>
-          <StyledLink mode={mode} to="">
+          <StyledLink mode={mode} type={type} to="/">
             Awards
           </StyledLink>
         </li>
         <li>
-          <StyledLink mode={mode} to="">
+          <StyledLink mode={mode} type={type} to="/">
             Testimonials
           </StyledLink>
         </li>
         <li>
-          <Socials size="sm" mode={mode} />
+          <Socials size="sm" mode={mode} type="primary" />
         </li>
       </LinksList>
     </Nav>

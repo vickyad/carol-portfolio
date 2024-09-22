@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Icon from "./Icon";
-import { ModeType, SizeType } from "../types/types";
+import { ModeType, SizeType, VariantType } from "../types/types";
 import { Link } from "react-router-dom";
 
 const Container = styled.ul<{ size: SizeType }>`
@@ -13,9 +13,14 @@ const Container = styled.ul<{ size: SizeType }>`
 interface SocialsProps {
   size?: SizeType;
   mode?: ModeType;
+  type?: VariantType;
 }
 
-const Socials = ({ size = "base", mode = "light" }: SocialsProps) => {
+const Socials = ({
+  size = "base",
+  mode = "light",
+  type = "secondary",
+}: SocialsProps) => {
   return (
     <Container size={size}>
       <li>
@@ -27,7 +32,13 @@ const Socials = ({ size = "base", mode = "light" }: SocialsProps) => {
           <Icon
             type="instagram"
             size={size}
-            color={mode === "light" ? "#5e262b" : "#ffffff"}
+            color={
+              type === "primary"
+                ? "transparent"
+                : mode === "light"
+                ? "#5e262b"
+                : "#ffffff"
+            }
           />
         </Link>
       </li>
@@ -40,7 +51,13 @@ const Socials = ({ size = "base", mode = "light" }: SocialsProps) => {
           <Icon
             type="linkedin"
             size={size}
-            color={mode === "light" ? "#5e262b" : "#ffffff"}
+            color={
+              type === "primary"
+                ? "transparent"
+                : mode === "light"
+                ? "#5e262b"
+                : "#ffffff"
+            }
           />
         </Link>
       </li>
@@ -53,7 +70,13 @@ const Socials = ({ size = "base", mode = "light" }: SocialsProps) => {
           <Icon
             type="dribble"
             size={size}
-            color={mode === "light" ? "#5e262b" : "#ffffff"}
+            color={
+              type === "primary"
+                ? "transparent"
+                : mode === "light"
+                ? "#5e262b"
+                : "#ffffff"
+            }
           />
         </Link>
       </li>
