@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/carol-portfolio/static/css/main.1e96e344.css",
-    "main.js": "/carol-portfolio/static/js/main.b69db685.js",
+    "main.js": "/carol-portfolio/static/js/main.68b4e3d3.js",
     "static/js/453.d8b1e912.chunk.js": "/carol-portfolio/static/js/453.d8b1e912.chunk.js",
     "static/media/Homepage_polandsprings.mp4": "/carol-portfolio/static/media/Homepage_polandsprings.5528cc1a4cb9ee164b87.mp4",
     "static/media/Homepage_deerpark.mp4": "/carol-portfolio/static/media/Homepage_deerpark.65d4a1e104ef736af203.mp4",
@@ -15,7 +15,7 @@
     "static/media/Contact_Us_souza.mp4": "/carol-portfolio/static/media/Contact_Us_souza.995a3fa01e341094636e.mp4",
     "static/media/FAQ_souza.mp4": "/carol-portfolio/static/media/FAQ_souza.157c99066d44d846cbf8.mp4",
     "static/media/Product_landing_page_deerpark.mp4": "/carol-portfolio/static/media/Product_landing_page_deerpark.61f79c9caa31b1725beb.mp4",
-    "static/media/hero_night.png": "/carol-portfolio/static/media/hero_night.63a914c73c427a12af0c.png",
+    "static/media/hero_night.png": "/carol-portfolio/static/media/hero_night.7c52f97d2d9d5e5852a5.png",
     "static/media/Product_landing_page_souza.mp4": "/carol-portfolio/static/media/Product_landing_page_souza.6470be64106d7e6b6984.mp4",
     "static/media/hero_day.png": "/carol-portfolio/static/media/hero_day.0be4b9f4871902a580c6.png",
     "static/media/poland_spring_banner.png": "/carol-portfolio/static/media/poland_spring_banner.a4c6537dc52de40d42fc.png",
@@ -60,11 +60,11 @@
     "static/media/barbara.png": "/carol-portfolio/static/media/barbara.d90f33ca8c73bb9aac15.png",
     "index.html": "/carol-portfolio/index.html",
     "main.1e96e344.css.map": "/carol-portfolio/static/css/main.1e96e344.css.map",
-    "main.b69db685.js.map": "/carol-portfolio/static/js/main.b69db685.js.map",
+    "main.68b4e3d3.js.map": "/carol-portfolio/static/js/main.68b4e3d3.js.map",
     "453.d8b1e912.chunk.js.map": "/carol-portfolio/static/js/453.d8b1e912.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e96e344.css",
-    "static/js/main.b69db685.js"
+    "static/js/main.68b4e3d3.js"
   ]
 }
